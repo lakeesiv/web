@@ -22,7 +22,8 @@
   padding-right:var(--nav-pad-space);
 }
 
-.navbar-nav > li{
-  margin-left:var(--nav-mar-space;
+/*.navbar-nav > li{
+  margin-left:var(--nav-mar-space);
   margin-right:var(--nav-mar-space);
 }
+*/
