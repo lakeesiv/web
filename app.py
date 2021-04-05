@@ -6,19 +6,19 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template("home.html", title = "Test")
+    return render_template("home.html", title = "Home")
 
 @app.route("/about")
 def about():
-    return "about"
+     return render_template("about.html", title = "About")
 
 @app.route("/projects")
 def projects():
-    return "projects"
+     return render_template("projects.html", title = "Projects")
 
 @app.route("/blog")
 def blog():
-    return "blog"
+     return render_template("blog.html", title = "Blog")
 
 
 
