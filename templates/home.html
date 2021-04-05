@@ -3,15 +3,7 @@
 {%block content%}
 <h1><span class="home-title"></span></h1>
 
-    <script>
-        var typed = new Typed(".home-title", {
-            strings: ["Welcome", "to", "my","Website"],
-            typeSpeed: 50,
-            loop: false,
-            backDelay: 900,
-            backSpeed: 30,
-        });
-    </script>
+ <script type="text/javascript" src="{{url_for('static', filename = 'home.js')}}"></script>
 
 
 {%endblock content%}
