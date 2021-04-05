@@ -1,6 +1,7 @@
 :root {
   --nav-pad-space: 2vw;
   --nav-mar-space: 2vw;
+  --nav-margin-bottom: 50px;
 }
 
 ::-webkit-scrollbar {
@@ -22,8 +23,6 @@
   padding-right: var(--nav-pad-space);
 }
 
-/*.navbar-nav > li{
-  margin-left:var(--nav-mar-space);
-  margin-right:var(--nav-mar-space);
+.navbar {
+  margin-bottom: var(--nav-margin-bottom);
 }
-*/
