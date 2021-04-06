@@ -1,8 +1,14 @@
-.lname {
+.lname,
+.lemail,
+.lsubject {
   margin-bottom: 10px;
   margin-top: 10px;
 }
 
 .lmess {
+  margin-top: 20px;
+}
+
+.btn {
   margin-top: 20px;
 }

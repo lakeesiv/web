@@ -1,27 +1,32 @@
-{%block imp%}
+{%extends "base.html"%} {%block content%} {%block imp%}
 <link
   rel="stylesheet"
   type="text/css"
   href="{{ url_for('static', filename='contact.css') }}"
 />
-{%endblock imp%} {%extends "base.html"%} {%block content%}
+{%endblock imp%}
+
 <h1>Contact</h1>
 
+{% with messages = get_flashed_messages() %} {% if messages %} {% for msg in
+messages %}
+<strong>{{msg}}</strong>
+{% endfor %} {% endif %} {% endwith %}
+
 <div class="row">
-  <!--Grid column-->
   <div class="col-md-12 mb-md-0 mb-5">
-    <form id="contact-form" name="contact-form" action="#" method="POST">
+    <form id="contact-form" name="contact-form" action="#" method="post">
       <div class="row">
         <div class="col-md-6">
           <div class="md-form mb-0">
-            <label for="name" class="lname">Name</label>
+            <label name="name" class="lname">Name</label>
             <input type="text" id="name" name="name" class="form-control" />
           </div>
         </div>
 
         <div class="col-md-6">
           <div class="md-form mb-0">
-            <label for="email" class="lname">Email</label>
+            <label name="email" type="email" class="lemail">Email</label>
             <input type="text" id="email" name="email" class="form-control" />
           </div>
         </div>
@@ -30,7 +35,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="md-form mb-0">
-            <label for="subject" class="lname">Subject</label>
+            <label name="subject" class="lsubject">Subject</label>
             <input
               type="text"
               id="subject"
@@ -55,13 +60,12 @@
           </div>
         </div>
       </div>
+      <div class="text-center text-md-left">
+        <button class="btn btn-dark" type="submit" name="send">Send</button>
+      </div>
     </form>
     <br />
-    <div class="text-center text-md-left">
-      <a class="btn btn-dark">Send</a>
-    </div>
-    <div class="status"></div>
   </div>
-</div>
 
-{%endblock content%}
+  {%endblock content%}
+</div>
