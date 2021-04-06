@@ -13,6 +13,10 @@
   margin-top: 20px;
 }
 
-.sec-form{
-	margin-top: 25px;
+.sec-form {
+  margin-top: 25px;
+}
+
+textarea {
+  height: 20vh;
 }

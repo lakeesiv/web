@@ -10,80 +10,81 @@
 
 {% with messages = get_flashed_messages() %} {% if messages %} {% for msg in
 messages %}
-<br>
-<strong style="font-size: 3vh;">{{msg}}</strong>
+<br />
+<strong style="font-size: 3vh">{{msg}}</strong>
 {% endfor %} {% endif %} {% endwith %}
 
 <section class="sec-form">
-<div class="row">
-  <div class="col-md-12 mb-md-0 mb-5">
-    <form id="contact-form" name="contact-form" action="#" method="post">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="md-form mb-0">
-            <label name="name" class="lname">Name</label>
-            <input
-              type="text"
-              value="{{_name}}"
-              id="name"
-              name="name"
-              class="form-control"
-            />
+  <div class="row">
+    <div class="col-md-12 mb-md-0 mb-5">
+      <form id="contact-form" name="contact-form" action="#" method="post">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="md-form mb-0">
+              <label name="name" class="lname">Name</label>
+              <input
+                type="text"
+                value="{{_name}}"
+                id="name"
+                name="name"
+                class="form-control"
+              />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="md-form mb-0">
+              <label name="email" type="email" class="lemail">Email</label>
+              <input
+                type="text"
+                value="{{_email}}"
+                id="email"
+                name="email"
+                class="form-control"
+              />
+            </div>
           </div>
         </div>
 
-        <div class="col-md-6">
-          <div class="md-form mb-0">
-            <label name="email" type="email" class="lemail">Email</label>
-            <input
-              type="text"
-              value="{{_email}}"
-              id="email"
-              name="email"
-              class="form-control"
-            />
+        <div class="row">
+          <div class="col-md-12">
+            <div class="md-form mb-0">
+              <label name="subject" class="lsubject">Subject</label>
+              <input
+                type="text"
+                value="{{_subject}}"
+                id="subject"
+                name="subject"
+                class="form-control"
+              />
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-md-12">
-          <div class="md-form mb-0">
-            <label name="subject" class="lsubject">Subject</label>
-            <input
-              type="text"
-              value="{{_subject}}"
-              id="subject"
-              name="subject"
-              class="form-control"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12">
-          <div class="md-form">
-            <label for="message" class="lmess">Message</label>
-            <textarea
-              type="text"
-              id="message"
-              name="message"
-              rows="2"
-              class="form-control md-textarea"
-            >
+        <div class="row">
+          <div class="col-md-12">
+            <div class="md-form">
+              <label for="message" class="lmess">Message</label>
+              <textarea
+                type="text"
+                id="message"
+                name="message"
+                rows="2"
+                class="form-control md-textarea"
+                style = "height: 30vh"
+              >
 {{_message}}</textarea
-            >
+              >
+            </div>
           </div>
         </div>
-      </div>
-      <div class="text-center text-md-left">
-        <button class="btn btn-dark" type="submit" name="send">Send</button>
-      </div>
-    </form>
-    <br />
-  </div>
+        <div class="text-center text-md-left">
+          <button class="btn btn-dark" type="submit" name="send">Send</button>
+        </div>
+      </form>
+      <br />
+    </div>
 
-  {%endblock content%}
-</div>
+    {%endblock content%}
+  </div>
 </section>
