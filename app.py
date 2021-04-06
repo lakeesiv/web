@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template, send_from_directory, request, redirect, url_for, flash
-from utils import get_secret_key
+from utils import get_secret_key, email_check
 
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
@@ -50,16 +50,19 @@ def contact():
         subject = request.form["subject"]
         message = request.form["message"]
 
-        if name and email and subject and message:
+        if name and email_check(email) and subject and message:
             res = name + email + subject + message
             return redirect(url_for("test", tst=res))
         else:
             flash("Make sure there is no empty fields")
-
-        return render_template(
-            "contact.html",
-            title="Contact",
-            active_page="contact")
+            return render_template(
+                "contact.html",
+                title="Contact",
+                active_page="contact",
+                _name = name,
+                _email=email,
+                _subject = subject,
+                _message = message)
 
     else:
         return render_template(
