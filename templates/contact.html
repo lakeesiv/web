@@ -10,9 +10,11 @@
 
 {% with messages = get_flashed_messages() %} {% if messages %} {% for msg in
 messages %}
-<strong>{{msg}}</strong>
+<br>
+<strong style="font-size: 3vh;">{{msg}}</strong>
 {% endfor %} {% endif %} {% endwith %}
 
+<section class="sec-form">
 <div class="row">
   <div class="col-md-12 mb-md-0 mb-5">
     <form id="contact-form" name="contact-form" action="#" method="post">
@@ -69,7 +71,9 @@ messages %}
               name="message"
               rows="2"
               class="form-control md-textarea"
-            >{{_message}}</textarea>
+            >
+{{_message}}</textarea
+            >
           </div>
         </div>
       </div>
@@ -82,3 +86,4 @@ messages %}
 
   {%endblock content%}
 </div>
+</section>
