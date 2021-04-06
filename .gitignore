@@ -3,3 +3,4 @@ secret_key.txt
 __pycache__
 email_details.txt
 deploy
+*.env
