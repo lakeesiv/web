@@ -1,10 +1,29 @@
 import re
 import smtplib
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
+def env(var):
+    return os.environ.get(var)
 
 
 def get_secret_key():
-    f = open("secret_key.txt", "r")
-    return f.read()
+    return env("SECRET_KEY")
+
+
+def get_api_key():
+    return env("SENDGRID_API_KEY")
+
+
+def get_sender():
+    return env("SENDER")
+
+
+def get_reciever():
+    return env("RECIEVER")
 
 
 def email_check(email):
@@ -23,29 +42,3 @@ def email_details():
         res.append(line.strip("\n"))
 
     return res[0], res[1], res[2]
-
-
-def send_email(name, email, subject, message):
-
-    mess = f"""\
-	New Email! from {name}
-
-	Topic:
-	{subject}
-
-
-	Message:
-	{message}
-
-
-	From:
-	{email}
-	{name}
-	"""
-
-    sender, pasw, reciever = email_details()
-    server = smtplib.SMTP("smtp.gmail.com", 587)
-    server.starttls()
-    server.login(sender, pasw)
-    print(mess)
-    server.sendmail(sender, reciever, mess)
