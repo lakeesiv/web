@@ -1,10 +1,21 @@
 import os
 from flask import Flask, render_template, send_from_directory, request, redirect, url_for, flash
-from utils import get_secret_key, email_check, send_email
+from flask_mail import Mail, Message
+from utils import get_secret_key, email_check, get_api_key, get_sender, get_reciever
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
-app.secret_key = get_secret_key()
+app.config['SECRET_KEY'] = get_secret_key()
+app.config['MAIL_SERVER'] = 'smtp.sendgrid.net'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = 'apikey'
+app.config['MAIL_PASSWORD'] = get_api_key()
+app.config['MAIL_DEFAULT_SENDER'] = get_sender()
+mail = Mail(app)
 
 
 @app.route('/favicon.ico')
@@ -52,7 +63,17 @@ def contact():
 
         if name and email_check(email) and subject and message:
             flash("Sent!")
-            send_email(name, email, subject, message)
+            msg = Message(
+                f'New Email from {name}',
+                recipients=[
+                    get_reciever()])
+
+            msg.html = (f'<h1>{subject}</h1>'
+                        f'<p>Message: {message}</p>'
+                        f'From {name}  {email}'
+                        )
+            mail.send(msg)
+
         else:
             flash("Make sure there is no empty fields and that the email is valid")
         return render_template(
@@ -76,9 +97,9 @@ def page_not_found(e):
     return render_template('404.html'), 404
 
 
-@app.route("/<tst>")
-def test(tst):
-    return f"<h1>{tst}</h1>"
+# @app.route("/<tst>")
+# def test(tst):
+#     return f"<h1>{tst}</h1>"
 
 
 if __name__ == "__main__":
