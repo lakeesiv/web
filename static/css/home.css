@@ -1,0 +1,16 @@
+.home-title {
+  justify-content: center;
+  text-align: center;
+  margin-top: -30pt;
+}
+
+h1.h1-home-title {
+  font-size: 50pt;
+}
+
+.fa-github,
+.fa-linkedin {
+  font-size: 20pt;
+  padding-left: 5pt;
+  padding-right: 5pt;
+}

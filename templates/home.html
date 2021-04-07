@@ -4,12 +4,31 @@
   type="text/css"
   href="{{ url_for('static', filename='css/terminal.css') }}"
 />
-{%endblock imp%} {%block content%}
-<h1><span class="home-title"></span></h1>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
 
-<script
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='css/home.css') }}"
+/>
+
+{%endblock imp%} {%block content%}
+
+<div class="container home-title">
+  <h1 class="h1-home-title">Lakee Sivaraya</h1>
+  <a class="btn" href="https://github.com/LakeeSiv" target="_blank"
+    ><i class="fa fa-github"></i
+  ></a>
+  <a class="btn" href="https://www.linkedin.com/in/lakeesiv/" target="_blank"
+    ><i class="fa fa-linkedin"></i
+  ></a>
+</div>
+<!-- <script
   type="text/javascript"
   src="{{url_for('static', filename = 'js/home.js')}}"
 ></script>
-
+ -->
 {% include "terminal.html" %} {%endblock content%}
