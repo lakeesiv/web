@@ -1,56 +1,56 @@
 @import url("https://fonts.googleapis.com/css?family=Consolas");
-span.console,strong.ico, strong.terminal-title {
-	font-family: "Consolas", monospace;
+span.console,
+strong.ico,
+strong.terminal-title {
+  font-family: "Consolas", monospace;
 }
 
 .terminal-logo {
-	width: 20px;
-	justify-content: center;
-	margin-top: 4.5pt;
+  width: 20px;
+  justify-content: center;
+  margin-top: 4.5pt;
 }
 
-
 .terminal-title {
-	position: relative;
-	padding-left: 10pt;
-	font-size: 10pt;
-	top:3pt;
-
+  position: relative;
+  padding-left: 10pt;
+  font-size: 10pt;
+  top: 3pt;
 }
 
 header.terminal {
-	background: rgb(1,1,1);
-	height: 35px;
-	padding-left: 10px;
+  background: rgb(1, 1, 1);
+  height: 35px;
+  padding-left: 10px;
 }
 
 strong.ico {
-	font-size: 20pt;
-	float: right;
-	padding-right: 10pt;
-	margin-top: -5px;
-	padding-left: 10pt;
+  font-size: 20pt;
+  float: right;
+  padding-right: 10pt;
+  margin-top: -5px;
+  padding-left: 10pt;
 }
 
 strong.min {
-	margin-top: -11pt;
+  margin-top: -11pt;
 }
 
 .terminal-container {
-	text-align: left;
-	width: 100%;
-	border-radius: 10px;
-	margin: auto;
-	margin-bottom: 14px;
-	position: relative;
+  text-align: left;
+  width: 100%;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 14px;
+  position: relative;
 }
 .terminal-fixed-top {
-	margin-top: 30px;
+  margin-top: 30px;
 }
 .terminal-home {
-	background-color: #1c1c1c;
-	padding-top: 1em;
-	padding-bottom: 1em;
-	padding-left: 1.5em;
-	color: #fafafa;
+  background-color: #1c1c1c;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 1.5em;
+  color: #fafafa;
 }
