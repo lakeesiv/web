@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Consolas");
-p.console,strong.ico, strong.terminal-title {
+span.console,strong.ico, strong.terminal-title {
 	font-family: "Consolas", monospace;
 }
 
