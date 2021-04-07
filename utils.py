@@ -32,13 +32,3 @@ def email_check(email):
         return True
     else:
         return False
-
-
-def email_details():
-    f = open("email_details.txt", "r")
-    res = []
-    for i in range(3):
-        line = f.readline()
-        res.append(line.strip("\n"))
-
-    return res[0], res[1], res[2]
