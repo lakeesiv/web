@@ -8,10 +8,16 @@
 
 <h1>Contact</h1>
 
-{% with messages = get_flashed_messages() %} {% if messages %} {% for msg in
-messages %}
+{% with messages = get_flashed_messages(with_categories=true) %} {% if messages
+%} {% for cat, msg in messages %}
 <br />
-<strong style="font-size: 3vh">{{msg}}</strong>
+<div class="alert alert-{{ cat }} alert-dismissible fade show" role="alert">
+  <strong>{{ msg }}</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
 {% endfor %} {% endif %} {% endwith %}
 
 <section class="sec-form">
