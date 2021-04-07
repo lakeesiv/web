@@ -24,7 +24,7 @@ def favicon():
         os.path.join(
             app.root_path,
             'static'),
-        'favicon.ico',
+        'imgs/icons/favicon.ico',
         mimetype='image/vnd.microsoft.icon')
 
 
