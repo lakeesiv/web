@@ -62,28 +62,32 @@ def contact():
         message = request.form["message"]
 
         if name and email_check(email) and subject and message:
-            flash("Sent!")
+            flash("Sent!", "success")
             msg = Message(
-                f'New Email from {name}',
+                f'Email from {name}',
                 recipients=[
                     get_reciever()])
 
             msg.html = (f'<h1>{subject}</h1>'
-                        f'<p>Message: {message}</p>'
-                        f'From {name}  {email}'
+                        f'<h2>Message</h2>'
+                        f"<p>{message}</p>"
+                        f'From: {name} | {email}'
                         )
             mail.send(msg)
-
+            return redirect(url_for("contact"))
         else:
-            flash("Make sure there is no empty fields and that the email is valid")
-        return render_template(
-            "contact.html",
-            title="Contact",
-            active_page="contact",
-            _name=name,
-            _email=email,
-            _subject=subject,
-            _message=message)
+            if not email_check(email):
+                flash("Make sure the email is valid", "danger")
+            else:
+                flash("Make sure there is no empty fields", "danger")
+            return render_template(
+                "contact.html",
+                title="Contact",
+                active_page="contact",
+                _name=name,
+                _email=email,
+                _subject=subject,
+                _message=message)
 
     else:
         return render_template(
