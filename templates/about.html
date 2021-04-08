@@ -1,52 +1,80 @@
-{%extends "base.html"%} 
-{%block imp%}
+{%extends "base.html"%} {%block imp%}
 <link
   rel="stylesheet"
   type="text/css"
   href="{{ url_for('static', filename='css/about.css') }}"
 />
-{%endblock imp%}
-
-
-{%block content%}
+{%endblock imp%} {%block content%}
 <h1>About</h1>
-<hr>
+<hr />
 
-<p>Hi! My name is Lakee (pronounced lack-key), and I am a First Year Engineering student at the Univeristy of Cambridge. My academic interests are</p>
+<p>
+  Hi! My name is Lakee (pronounced lack-key), and I am a First Year Engineering
+  student at the Univeristy of Cambridge. My academic interests are
+</p>
 <ul>
-	<li class  = "interests"> Software development</li>
-	<li class  = "interests"> Electronics </li>
-	<li class  = "interests">Data Science & Visualization</li>
-	<li class  = "interests">Machine Learning</li>
+  <li class="interests">Software development</li>
+  <li class="interests">Electronics</li>
+  <li class="interests">Data Science & Visualization</li>
+  <li class="interests">Machine Learning</li>
 </ul>
-
 
 <h1>Education</h1>
-<hr>
+<hr />
 
 <div class="d-flex">
-      <div>
-         <p class = "education-title">University of Cambridge</p>
-      </div>
-      <div class="ml-auto">
-         <p class = "education-title">2020-2024</p>
-      </div>
- </div>
-<strong class = "left">MEng Engineering</strong>
-<p class = "year">First Year Modules</p>
+  <div>
+    <p class="education-title">University of Cambridge</p>
+  </div>
+  <div class="ml-auto">
+    <p class="education-title">2020-2024</p>
+  </div>
+</div>
+<strong class="left">MEng Engineering</strong>
+<p class="year">First Year Modules</p>
 <ul>
-	<li class  = "interests"> Software development</li>
-	<li class  = "interests"> Electronics </li>
-	<li class  = "interests">Data Science & Visualization</li>
-	<li class  = "interests">Machine Learning</li>
+  <li class="interests">
+    Mechanical engineering covering mechanics, mechanical vibrations and
+    thermofluid mechanics
+  </li>
+  <li class="interests">
+    Structures covering materials and structural mechanics
+  </li>
+  <li class="interests">
+    Electrical and information engineering covering physical principles of
+    electronics, analysis of circuits and devices, linear circuits,
+    electromagnetics, digital circuits and information processing
+  </li>
+  <li class="interests">
+    Mathematical Methods covering mathematics and computing
+  </li>
 </ul>
 
+<div class="d-flex">
+  <div>
+    <p class="education-title">New Sixth Bath</p>
+  </div>
+  <div class="ml-auto">
+    <p class="education-title">2018-2020</p>
+  </div>
+</div>
+<strong class="left">A Levels</strong>
+<ul>
+  <li class="interests">Mathematics - A*</li>
+  <li class="interests">Further Mathematics (self-taught) - A*</li>
+  <li class="interests">Physics - A*</li>
+  <li class="interests">Chemistry - A*</li>
+</ul>
 
 <h1>CV</h1>
-<hr>
+<hr />
 
-<p style="text-align: center;">
-<iframe src="https://drive.google.com/file/d/1EPhJ6jF3psxEAtprrkak3KGZu2-Y9yVu/preview" width="70%" height="750vh"></iframe>
+<p style="text-align: center">
+  <iframe
+    src="https://drive.google.com/file/d/1EPhJ6jF3psxEAtprrkak3KGZu2-Y9yVu/preview"
+    width="70%"
+    height="750vh"
+  ></iframe>
 </p>
 
 {%endblock content%}
