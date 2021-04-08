@@ -46,8 +46,7 @@ def projects():
         "projects.html",
         title="Projects",
         active_page="projects",
-        projects = {"test1":["text", "/"],
-                    "test2" : ["ad", "/contact"] })
+        projects = [{"title":"test1", "text":"text1"},{"title":"test2", "text":"text2"}])
 
 
 @app.route("/blog")
