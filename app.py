@@ -45,7 +45,9 @@ def projects():
     return render_template(
         "projects.html",
         title="Projects",
-        active_page="projects")
+        active_page="projects",
+        projects = {"test1":["text", "/"],
+                    "test2" : ["ad", "/contact"] })
 
 
 @app.route("/blog")

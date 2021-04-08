@@ -2,12 +2,11 @@
 <h1>Projects</h1>
 
 <div class = "card-deck" style="display: inline-block">
-{% include "card.html" %}
-{% include "card.html" %}
-{% include "card.html" %}
-{% include "card.html" %}
+{% for cardtitle, arr in projects.items()%}
+{% set text = arr[0] %}
 {% include "card.html" %}
 
+{% endfor %}
 
 </div>
 {%endblock content%}
