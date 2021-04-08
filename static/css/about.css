@@ -21,9 +21,17 @@ li.interests {
 }
 
 .education-title {
-	font-size: 16pt
+	font-style: oblique;	
+	font-size: 16pt;
+	padding-bottom: 0pt;
+	margin-bottom: 0pt;
 }
 
+.year{
+	text-decoration: underline;
+	padding-top: 5pt;
+	padding-bottom: 0pt;
+}
 
 h1 {
 	padding-bottom: 10pt;
