@@ -1,14 +1,12 @@
 import os
 from flask import Flask, render_template, send_from_directory, request, redirect, url_for, flash
 from flask_mail import Mail, Message
-from utils import get_secret_key, email_check, get_api_key, get_sender, get_reciever
+from utils import get_secret_key, email_check, get_api_key, get_sender, get_reciever, projects_json
 from dotenv import load_dotenv
-from projects import projects
 
 load_dotenv()
 
 app = Flask(__name__)
-app.register_blueprint(projects, url_prefix='/projects')
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config['SECRET_KEY'] = get_secret_key()
 app.config['MAIL_SERVER'] = 'smtp.sendgrid.net'
@@ -40,6 +38,15 @@ def home():
 def about():
 
     return render_template("about.html", title="About", active_page="about")
+
+
+@app.route("/projects")
+def projects():
+    return render_template(
+        "projects.html",
+        title="Projects",
+        active_page="projects",
+        projects=projects_json("static/project_list.json"))
 
 
 @app.route("/blog")

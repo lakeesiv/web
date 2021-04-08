@@ -2,6 +2,7 @@ import re
 import smtplib
 import os
 from dotenv import load_dotenv
+import json
 
 load_dotenv()
 
@@ -32,3 +33,9 @@ def email_check(email):
         return True
     else:
         return False
+
+
+def projects_json(path):
+    with open(path) as json_file:
+        data = json.load(json_file)
+        return data
