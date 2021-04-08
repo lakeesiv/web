@@ -1,0 +1,30 @@
+p,
+li.interests {
+	font-size: 12pt;
+}
+
+li.interests {
+	margin-top: 0px;
+	margin-bottom: 8px;
+}
+
+.left {
+	text-align: left;
+	width: 49%;
+	display: inline-block;
+}
+
+.right {
+	text-align: right;
+	width: 50%;
+	display: inline-block;
+}
+
+.education-title {
+	font-size: 16pt
+}
+
+
+h1 {
+	padding-bottom: 10pt;
+}
