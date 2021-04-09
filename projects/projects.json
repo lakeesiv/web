@@ -1,15 +1,15 @@
 [
 	{
-		"title": "Website built with Flask",
-		"text": "This website was built using flask",
-		"link": "projects/flask-website",
+		"title": "Flask Website",
+		"date": "This website built with flask",
+		"link": "flask-website",
 		"img": "cardimgs/flask-website.png"
 	},
 
 	{
 		"title": "EtOH",
-		"text": "Project from HackCambridge 2021",
-		"link": "projects/etoh",
+		"date": "Project from HackCambridge 2021",
+		"link": "etoh",
 		"img": "cardimgs/etoh.png"
 	}
 ]
