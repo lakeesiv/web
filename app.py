@@ -42,15 +42,6 @@ def about():
     return render_template("about.html", title="About", active_page="about")
 
 
-# @app.route("/projects")
-# def projects():
-#     return render_template(
-#         "projects.html",
-#         title="Projects",
-#         active_page="projects",
-#         projects=projects_json("static/project_list.json"))
-
-
 @app.route("/blog")
 def blog():
     return render_template("blog.html", title="Blog", active_page="blog")
@@ -101,11 +92,6 @@ def contact():
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
-
-
-# @app.route("/<tst>")
-# def test(tst):
-#     return f"<h1>{tst}</h1>"
 
 
 if __name__ == "__main__":

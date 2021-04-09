@@ -17,9 +17,3 @@ def projects_home():
         title="Projects",
         active_page="projects",
         projects=projects_json("projects/projects.json"))
-
-
-# @projects.route("/test")
-# def projects_test():
-#     a = projects_json("projects/projects.json")
-#     return f"<h1>{a}</h1>"
