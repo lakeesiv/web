@@ -1,0 +1,13 @@
+{%extends "base-projects.html"%} {%block content%}
+<h1>Projects</h1>
+
+<div class="card-deck" style="display: inline-block">
+  {% for project in projects %} 
+  {% set text = project["text"] %} 
+  {% set link = project["link"] %} 
+  {% set img = url_for("projects.static", filename = project["img"])%} 
+  {% set cardtitle = project["title"] %} 
+  {% set text = project["text"] %} 
+  {% include "card.html" %} {% endfor %}
+</div>
+{%endblock content%}
