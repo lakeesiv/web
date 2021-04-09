@@ -1,7 +1,16 @@
 {%extends "base-projects.html"%} {%block content%}
+
+{% block imp %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('projects.static', filename='css/card-column.css') }}"
+/>
+{% endblock imp %}
+
 <h1>Projects</h1>
 
-<div class="card-deck" style="display: inline-block">
+<div class="card-deck" style="display: inline-block;justify-content: center">
   {% for project in projects %} 
   {% set text = project["text"] %} 
   {% set link = project["link"] %} 
@@ -10,4 +19,6 @@
   {% set text = project["text"] %} 
   {% include "card.html" %} {% endfor %}
 </div>
+
+
 {%endblock content%}
