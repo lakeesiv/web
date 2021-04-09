@@ -12,7 +12,7 @@
 
 <div class="card-deck" style="display: inline-block;justify-content: center">
   {% for project in projects %} 
-  {% set text = project["text"] %} 
+  {% set date = project["date"] %} 
   {% set link = project["link"] %} 
   {% set img = url_for("projects.static", filename = project["img"])%} 
   {% set cardtitle = project["title"] %} 
