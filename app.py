@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, send_from_directory, request, redirect, url_for, flash
 from flask_mail import Mail, Message
-from utils import get_secret_key, email_check, get_api_key, get_sender, get_reciever, projects_json
+from utils import get_secret_key, email_check, get_api_key, get_sender, get_reciever, projects_json, get_status
 from dotenv import load_dotenv
 from projects import projects
 
@@ -17,6 +17,12 @@ app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'apikey'
 app.config['MAIL_PASSWORD'] = get_api_key()
 app.config['MAIL_DEFAULT_SENDER'] = get_sender()
+
+if get_status() == "dev":
+    app.debug = True
+else:
+    app.debug = False
+
 mail = Mail(app)
 
 
@@ -95,4 +101,4 @@ def page_not_found(e):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()

@@ -39,3 +39,7 @@ def projects_json(path):
     with open(path) as json_file:
         data = json.load(json_file)
         return data
+
+
+def get_status():
+    return env("STATUS")
