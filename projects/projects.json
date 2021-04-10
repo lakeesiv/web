@@ -15,6 +15,13 @@
 		"date": "23-24/01/2021"
 	},
 	{
+		"title": "Flood",
+		"text": "Webapp to visualize areas at risk to flooding",
+		"link": "flood",
+		"img": "cardimgs/flood.png",
+		"date": "11-29/01/2021"
+	},
+	{
 		"title": "X-ray CNN",
 		"text": "CNNs to identify pneumonia in chest x-rays",
 		"link": "x-ray-cnn",
