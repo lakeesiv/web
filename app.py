@@ -69,7 +69,7 @@ def contact():
                     get_reciever()])
 
             msg.html = (f'<h1>{subject}</h1>'
-                        f"<p>{message}</p>"
+                        f"<p style = 'white-space: pre-wrap'>{message}</p>"
                         f'From: {name} | {email}'
                         )
             mail.send(msg)
