@@ -4,7 +4,9 @@
 		"text": "This website you are on now was built with flask",
 		"link": "flask-website",
 		"img": "cardimgs/flask-website.PNG",
-		"date": "5/4/21 - present"
+		"date": "5/4/21 - present",
+		"github": "https://github.com/LakeeSiv/web",
+
 	},
 
 	{
@@ -12,20 +14,23 @@
 		"text": "Team project from HackCambridge 2021",
 		"link": "etoh",
 		"img": "cardimgs/etoh.png",
-		"date": "23-24/01/21"
+		"date": "23-24/01/21",
+		"github": "https://github.com/LakeeSiv/HackCambridge",
 	},
 	{
 		"title": "Flood",
 		"text": "Webapp to visualize areas at risk to flooding",
 		"link": "flood",
 		"img": "cardimgs/flood.png",
-		"date": "11-29/01/21"
+		"date": "11-29/01/21",
+		"github": "https://github.com/LakeeSiv/Flood",
 	},
 	{
 		"title": "X-ray CNN",
 		"text": "CNNs to identify pneumonia in chest x-rays",
 		"link": "x-ray-cnn",
 		"img": "cardimgs/x-ray-cnn.jpg",
-		"date": "22-28/12/20"
+		"date": "22-28/12/20",
+		"github": "https://github.com/LakeeSiv/x-ray-CNN",
 	}
 ]
