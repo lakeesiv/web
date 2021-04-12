@@ -1,0 +1,18 @@
+{%extends "base-projects.html"%} 
+{% block imp %}
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+{% endblock imp %}
+{%block content%}
+<div class="container">
+  <h1 class="h1-home-title">{{ title }}</h1>
+  {% if github %}
+  <a class="btn" href="{{ github }}" target="_blank"
+    ><i class="fa fa-github"></i
+  ></a>
+  {% endif %}
+</div>
+
+{% endblock content %}
