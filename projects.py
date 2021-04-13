@@ -30,7 +30,7 @@ def projects_page(project_link):
                 title = d["title"]
                 github = d["github"]
         return render_template(
-            f"projects/{project_link}.html",
+            f"projects/{project_link}/{project_link}.html",
             title=f"{title}",
             active_page="projects",
             github = github)
