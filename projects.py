@@ -29,10 +29,12 @@ def projects_page(project_link):
             if project_link == d["link"]:
                 title = d["title"]
                 github = d["github"]
+                tech = d["tech"]
         return render_template(
             f"projects/{project_link}/{project_link}.html",
             title=f"{title}",
             active_page="projects",
-            github = github)
+            github = github,
+            tech = tech)
     else:
         return render_template("404.html"), 404
