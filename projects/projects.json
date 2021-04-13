@@ -6,7 +6,8 @@
 		"img": "cardimgs/flask-website.PNG",
 		"date": "5/4/21 - present",
 		"github": "https://github.com/LakeeSiv/web",
-		"tech": "Flask, Bootstrap, Flask-Mail, SendGrid's mail API, Typed.js"
+		"tech": "Flask, Bootstrap, Flask-Mail, SendGrid's mail API, Typed.js",
+		"website":"https://lakee.herokuapp.com/"
 	},
 
 	{
@@ -16,7 +17,8 @@
 		"img": "cardimgs/etoh.png",
 		"date": "23-24/01/21",
 		"github": "https://github.com/LakeeSiv/HackCambridge",
-		"tech": "Dash, plotly"
+		"tech": "Dash, plotly",
+		"website":"https://etoh.herokuapp.com/"
 	},
 	{
 		"title": "Flood",
@@ -25,7 +27,8 @@
 		"img": "cardimgs/flood.png",
 		"date": "11-29/01/21",
 		"github": "https://github.com/LakeeSiv/Flood",
-		"tech": "pytest, Dash, plotly, Continous Integration (github actions)"
+		"tech": "pytest, Dash, plotly, Continous Integration (github actions)",
+		"website":"https://flood-lsfm.herokuapp.com/"
 	},
 	{
 		"title": "X-ray CNN",
@@ -34,6 +37,7 @@
 		"img": "cardimgs/x-ray-cnn.jpg",
 		"date": "22-28/12/20",
 		"github": "https://github.com/LakeeSiv/x-ray-CNN",
-		"tech": "Keras, numpy, openCV, Tkinter"
+		"tech": "Keras, numpy, openCV, Tkinter",
+		"website":""
 	}
 ]
