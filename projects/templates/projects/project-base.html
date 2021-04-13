@@ -20,8 +20,14 @@
   ></a>
   {% endif %}
 </h1>
+
 </div>
 <hr>
+{% if tech %}
+<h1 class="tech-used">
+  Technolgies used: {{ tech }}
+</h1>
+{% endif %}
 {% block pagecontent %}
 {% endblock pagecontent %}
 </div>
