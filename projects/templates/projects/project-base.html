@@ -1,5 +1,4 @@
-{%extends "base-projects.html"%} 
-{% block imp %}
+{%extends "base-projects.html"%} {% block imp %}
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -9,28 +8,26 @@
   type="text/css"
   href="{{ url_for('projects.static', filename='css/project-base.css') }}"
 />
-{% endblock imp %}
-{%block content%}
+{% endblock imp %} {%block content%}
 <div class="container">
-<div class="project-title">
-  <h1 class="h1-project-title">{{ title }}
-  {% if github %}
-  <a class="btn" href="{{ github }}" target="_blank"
-    ><i class="fa fa-github"></i
-  ></a>
-  {% endif %}
-</h1>
-
+  <div class="project-title">
+    <h1 class="h1-project-title">
+      {{ title }} {% if github %}
+      <a class="btn" href="{{ github }}" target="_blank"
+        ><i class="fa fa-github"></i
+      ></a>
+      {% endif %}
+    </h1>
+  </div>
+  <hr style="margin-bottom: 8pt" />
+  {% if website %}
+  <h1 style="text-align: center; font-size: 10pt">
+    <a href="{{website}}">{{website}}</a>
+  </h1>
+  <hr style="margin-top: 8pt" />
+  {%endif%} {% if tech %}
+  <h1 class="tech-used">Technolgies used: {{ tech }}</h1>
+  {% endif %} {% block pagecontent %} {% endblock pagecontent %}
 </div>
-<hr>
-{% if tech %}
-<h1 class="tech-used">
-  Technolgies used: {{ tech }}
-</h1>
-{% endif %}
-{% block pagecontent %}
-{% endblock pagecontent %}
-</div>
-
 
 {% endblock content %}
