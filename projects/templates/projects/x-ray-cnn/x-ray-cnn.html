@@ -1,5 +1,10 @@
 {%extends "projects/project-base.html"%} 
 
 {% block pagecontent %}
+<hr style="margin-top: 8pt">
+<h1>About</h1>
+<p float="left">
+  <img src="{{ url_for('projects.static', filename = '/projects/x-ray-cnn/IM-0001-0001.jpeg') }}" width=49% />   <img src="{{ url_for('projects.static', filename = '/projects/x-ray-cnn/person1_virus_9.jpeg') }}" width=50% /> 
+</p
 
 {% endblock pagecontent %}
