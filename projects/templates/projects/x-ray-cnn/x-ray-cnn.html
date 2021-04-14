@@ -25,6 +25,16 @@ Using Tkinter I created a GUI which allows the user to see the model's predictio
 <img src="{{ url_for('projects.static', filename = '/projects/x-ray-cnn/GUI.gif') }}" height=500px >
 </p>
 
+<h1>Model</h1>
+<p>The model was created using Keras.</p>
 
+<p>The best model `best_model.h5`  achieved **89.7%** accuracy on the unseen testing data.</p> 
+<p>This was achieved by using Keras Tuning to optimize the hyperparameters and the number of layers. The resulting model looks like:</p>
+
+
+<p align="center">
+<img src="{{ url_for('projects.static', filename = '/projects/x-ray-cnn/X-rayCNNStruc.PNG') }}" width=60% 
+centre>
+</p>
 
 {% endblock pagecontent %}
