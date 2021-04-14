@@ -3,8 +3,28 @@
 {% block pagecontent %}
 <hr style="margin-top: 8pt">
 <h1>About</h1>
-<p float="left">
-  <img src="{{ url_for('projects.static', filename = '/projects/x-ray-cnn/IM-0001-0001.jpeg') }}" width=49% />   <img src="{{ url_for('projects.static', filename = '/projects/x-ray-cnn/person1_virus_9.jpeg') }}" width=50% /> 
-</p
+
+<p float="center">
+  <img src="{{ url_for('projects.static', filename = '/projects/x-ray-cnn/IM-0001-0001.jpeg') }}" width=48% />   
+  <img src="{{ url_for('projects.static', filename = '/projects/x-ray-cnn/person1_virus_9.jpeg') }}" width=50%/> 
+</p>
+
+<p> Here you can see two chest X-rays, left being normal and right showing signs of pneumonia. You can clearly see that the right has areas of "haze", alluding to presence of pneumonia.</p>
+
+<strong>	How could we get software to identify which one has pneumonia then? 
+</strong>
+
+<p>
+Well, thats exactly where
+Convolutional Neural Networks (CNN) comes into play. <br/>  CNNs are commonly used to classify images and this repository contains CNN that I created to solve that problem with an accuracy of <strong>89.7%</strong>!</p>
+
+
+Using Tkinter I created a GUI which allows the user to see the model's prediction on the unseen test data.
+
+<p align="center">
+<img src="{{ url_for('projects.static', filename = '/projects/x-ray-cnn/GUI.gif') }}" height=500px >
+</p>
+
+
 
 {% endblock pagecontent %}
