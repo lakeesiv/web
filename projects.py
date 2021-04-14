@@ -12,9 +12,6 @@ projects = Blueprint(
 projects_data = projects_json("projects/projects.json")
 
 
-
-
-
 @projects.route("/")
 def projects_home():
     return render_template(
