@@ -1,6 +1,5 @@
 /*credit for timeline goes https://codepen.io/Web_Cifar/pen/jObBvqN*/
 
-
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +27,7 @@
 }
 .timeline ul li {
   padding: 20px;
-  background-color:  rgba(80, 80, 80, .1);
+  background-color: rgba(80, 80, 80, 0.1);
   border-radius: 10px;
   margin-bottom: 20px;
 }
