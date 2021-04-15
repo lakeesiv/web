@@ -8,6 +8,9 @@ li.interests {
   margin-bottom: 8px;
 }
 
+ul.interests {
+  margin-left: 35px;
+}
 .left {
   text-align: left;
   width: 49%;
