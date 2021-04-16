@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, send_from_directory, request, redirect, url_for, flash
 from flask_mail import Mail, Message
-from utils import get_secret_key, email_check, get_api_key, get_sender, get_reciever, get_status
+from utils import get_secret_key, email_check, get_api_key, get_sender, get_reciever, get_status, get_json
 from dotenv import load_dotenv
 from projects import projects
 
@@ -42,10 +42,17 @@ def home():
     return render_template("home.html", title="Home", active_page="home")
 
 
+timeline_data = get_json("static/timeline.json")
+
+
 @app.route("/about")
 def about():
 
-    return render_template("about.html", title="About", active_page="about")
+    return render_template(
+        "about.html",
+        title="About",
+        active_page="about",
+        timelinedata=timeline_data)
 
 
 @app.route("/blog")
