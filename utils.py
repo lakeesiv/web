@@ -35,7 +35,7 @@ def email_check(email):
         return False
 
 
-def projects_json(path):
+def get_json(path):
     with open(path) as json_file:
         data = json.load(json_file)
         return data

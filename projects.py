@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, url_for
-from utils import projects_json
+from utils import get_json
 
 projects = Blueprint(
     'projects',
@@ -9,7 +9,7 @@ projects = Blueprint(
     static_folder='projects/static',
 )
 
-projects_data = projects_json("projects/projects.json")
+projects_data = get_json("projects/projects.json")
 
 
 @projects.route("/")
