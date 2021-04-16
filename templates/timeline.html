@@ -9,6 +9,9 @@
 <div class="container-timeline">
   <div class="timeline">
     <ul>
+      {% for data in timelinedata %} {% set heading = data["heading"] %} {% set
+      content = data["content"] %} {% set date = data["date"] %}
+
       <li>
         <div class="timeline-content">
           <h3 class="date">{{ date }}</h3>
@@ -16,6 +19,7 @@
           <p>{{ content }}</p>
         </div>
       </li>
+      {% endfor %}
     </ul>
   </div>
 </div>
