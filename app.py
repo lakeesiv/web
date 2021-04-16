@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, send_from_directory, request, redirect, url_for, flash
 from flask_mail import Mail, Message
-from utils import get_secret_key, email_check, get_api_key, get_sender, get_reciever, projects_json, get_status
+from utils import get_secret_key, email_check, get_api_key, get_sender, get_reciever, get_status
 from dotenv import load_dotenv
 from projects import projects
 
