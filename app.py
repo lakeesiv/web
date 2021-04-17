@@ -38,7 +38,6 @@ else:
 mail = Mail(app)
 
 
-
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(
@@ -81,7 +80,8 @@ def contact():
         subject = request.form["subject"]
         message = request.form["message"]
 
-        if name and email_check(email) and subject and message:
+        if name and email_check(
+                email) and subject and message and recaptcha.verify():
             flash("Sent!", "success")
             msg = Message(
                 f'Email from {name}',
@@ -97,6 +97,8 @@ def contact():
         else:
             if not email_check(email):
                 flash("Make sure the email is valid", "danger")
+            elif not recaptcha.verify():
+                flash("Verify the ReCaptcha", "danger")
             else:
                 flash("Make sure there is no empty fields", "danger")
             return render_template(
