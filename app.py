@@ -4,13 +4,11 @@ from flask_mail import Mail, Message
 from utils import get_secret_key, email_check, get_api_key, get_sender, get_reciever, get_status, get_json, env
 from dotenv import load_dotenv
 from projects import projects
-# from flask_recaptcha import ReCaptcha
+from flask_recaptcha import ReCaptcha
 
 load_dotenv()
 
 app = Flask(__name__)
-# recaptcha = ReCaptcha()
-# recaptcha.init_app(app)
 
 app.register_blueprint(projects, url_prefix="/projects")
 
@@ -21,11 +19,15 @@ app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'apikey'
 app.config['MAIL_PASSWORD'] = get_api_key()
-# app.config['MAIL_DEFAULT_SENDER'] = get_sender()
-# app.config["RECAPTCHA_ENABLED"] = True
-# app.config["RECAPTCHA_SITE_KEY"] = env("RECAPTCHA_SITE")
-# app.config["RECAPTCHA_SECRET_KEY"] = env("RECAPTCHA_SECRET")
+app.config['MAIL_DEFAULT_SENDER'] = get_sender()
+app.config["RECAPTCHA_ENABLED"] = True
+app.config["RECAPTCHA_SITE_KEY"] = env("RECAPTCHA_SITE")
+app.config["RECAPTCHA_SECRET_KEY"] = env("RECAPTCHA_SECRET")
+app.config["RECAPTCHA_THEME"] = "dark"
 
+
+recaptcha = ReCaptcha()
+recaptcha.init_app(app)
 
 
 if get_status() == "dev":
