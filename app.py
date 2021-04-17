@@ -1,14 +1,19 @@
 import os
 from flask import Flask, render_template, send_from_directory, request, redirect, url_for, flash
 from flask_mail import Mail, Message
-from utils import get_secret_key, email_check, get_api_key, get_sender, get_reciever, get_status, get_json
+from utils import get_secret_key, email_check, get_api_key, get_sender, get_reciever, get_status, get_json, env
 from dotenv import load_dotenv
 from projects import projects
+from flask_recaptcha import ReCaptcha
 
 load_dotenv()
 
 app = Flask(__name__)
+recaptcha = ReCaptcha()
+recaptcha.init_app(app)
+
 app.register_blueprint(projects, url_prefix="/projects")
+
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config['SECRET_KEY'] = get_secret_key()
 app.config['MAIL_SERVER'] = 'smtp.sendgrid.net'
@@ -17,6 +22,11 @@ app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'apikey'
 app.config['MAIL_PASSWORD'] = get_api_key()
 app.config['MAIL_DEFAULT_SENDER'] = get_sender()
+app.config["RECAPTCHA_ENABLED"] = True
+app.config["RECAPTCHA_SITE_KEY"] = env("RECAPTCHA_SITE")
+app.config["RECAPTCHA_SECRET_KEY"] = env("RECAPTCHA_SECRET")
+
+
 
 if get_status() == "dev":
     app.debug = True
@@ -24,6 +34,7 @@ else:
     app.debug = False
 
 mail = Mail(app)
+
 
 
 @app.route('/favicon.ico')
