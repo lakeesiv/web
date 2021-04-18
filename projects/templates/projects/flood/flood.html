@@ -1,27 +1,58 @@
-{%extends "projects/project-base.html"%} 
-
-{% block pagecontent %}
-<hr>
+{%extends "projects/project-base.html"%} {% block pagecontent %}
+<hr />
 <h1 class="heading">About</h1>
 
 <p>
-This is the Part IA Lent Term computing activity at the Department of
-Engineering, University of Cambridge done by</p>
+	This is the Part IA Lent Term computing activity at the Department of
+	Engineering, University of Cambridge done by
+</p>
 
 <ul>
-<li>Lakee Sivaraya (ls914)</li>
-<li>Frank McMullan (fm528)</li>
+	<li>Lakee Sivaraya (ls914)</li>
+	<li>Frank McMullan (fm528)</li>
 </ul>
 <p>
-The activty involves using real-time river level data at nearly 2000 monitoring stations that is made available by the Department for Environment Food and Rural Affairs (DEFRA) at <a href="https://environment.data.gov.uk/">https://environment.data.gov.uk/</a>
+	The activty involves using real-time river level data at nearly 2000
+	monitoring stations that is made available by the Department for Environment
+	Food and Rural Affairs (DEFRA) at
+	<a href="https://environment.data.gov.uk/"
+		>https://environment.data.gov.uk/</a
+	>
+</p>
 <p>
-As a team we had to complete the Tasks at <a href="https://cued-partia-flood-warning.readthedocs.io/en/latest/deliverables.html">https://cued-partia-flood-warning.readthedocs.io/en/latest/deliverables.html</a></p>
+	As a team we had to complete the Tasks at
+	<a
+		href="https://cued-partia-flood-warning.readthedocs.io/en/latest/deliverables.html"
+		>https://cued-partia-flood-warning.readthedocs.io/en/latest/deliverables.html</a
+	>
 </p>
 
 <h1 class="heading">Website</h1>
 <p align="center">
-<img src="{{ url_for('projects.static', filename = '/projects/flood/demo.gif') }}" width="100%" >
+	<img
+		src="{{ url_for('projects.static', filename = '/projects/flood/demo.gif') }}"
+		width="100%"
+	/>
 </p>
+
+<p>
+	As an extension I created a web interface using
+	<a href="https://plotly.com/dash/">Dash</a>, to visualize areas at risk of
+	flooding. The approach I took to create this was:
+</p>
+<ul>
+	<li>
+		Firstly store all of the weather stations data (geographical location,
+		name, risk) in a pandas dataframe
+	</li>
+	<li>Map the severity to a specific color and marke style</li>
+	<li>Create an Dash app with a plotly graph element and a dropdown box</li>
+	<li>
+		Add callbacks to display the data, and show the selected data from the
+		dropdown box
+	</li>
+</ul>
+<br />
 
 <style type="text/css">
 	h1.heading {
@@ -29,6 +60,5 @@ As a team we had to complete the Tasks at <a href="https://cued-partia-flood-war
 		padding-top: 4pt;
 	}
 </style>
-
 
 {% endblock pagecontent %}
