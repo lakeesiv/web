@@ -1,5 +1,34 @@
 {%extends "projects/project-base.html"%} 
 
 {% block pagecontent %}
+<hr>
+<h1 class="heading">About</h1>
+
+<p>
+This is the Part IA Lent Term computing activity at the Department of
+Engineering, University of Cambridge done by</p>
+
+<ul>
+<li>Lakee Sivaraya (ls914)</li>
+<li>Frank McMullan (fm528)</li>
+</ul>
+<p>
+The activty involves using real-time river level data at nearly 2000 monitoring stations that is made available by the Department for Environment Food and Rural Affairs (DEFRA) at <a href="https://environment.data.gov.uk/">https://environment.data.gov.uk/</a>
+<p>
+As a team we had to complete the Tasks at <a href="https://cued-partia-flood-warning.readthedocs.io/en/latest/deliverables.html">https://cued-partia-flood-warning.readthedocs.io/en/latest/deliverables.html</a></p>
+</p>
+
+<h1 class="heading">Website</h1>
+<p align="center">
+<img src="{{ url_for('projects.static', filename = '/projects/flood/demo.gif') }}" width="100%" >
+</p>
+
+<style type="text/css">
+	h1.heading {
+		padding-bottom: 8pt;
+		padding-top: 4pt;
+	}
+</style>
+
 
 {% endblock pagecontent %}
