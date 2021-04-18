@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, send_from_directory, request, redirect, url_for, flash
 from flask_mail import Mail, Message
-from utils import get_secret_key, email_check, get_api_key, get_sender, get_reciever, get_status, get_json, env
+from utils import email_check, get_json, env
 from dotenv import load_dotenv
 from projects import projects
 from flask_recaptcha import ReCaptcha
@@ -13,13 +13,13 @@ app = Flask(__name__)
 app.register_blueprint(projects, url_prefix="/projects")
 
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
-app.config['SECRET_KEY'] = get_secret_key()
+app.config['SECRET_KEY'] = env("SECRET_KEY")
 app.config['MAIL_SERVER'] = 'smtp.sendgrid.net'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'apikey'
-app.config['MAIL_PASSWORD'] = get_api_key()
-app.config['MAIL_DEFAULT_SENDER'] = get_sender()
+app.config['MAIL_PASSWORD'] = env("SENDGRID_API_KEY")
+app.config['MAIL_DEFAULT_SENDER'] = env("SENDER")
 app.config["RECAPTCHA_ENABLED"] = True
 app.config["RECAPTCHA_SITE_KEY"] = env("RECAPTCHA_SITE")
 app.config["RECAPTCHA_SECRET_KEY"] = env("RECAPTCHA_SECRET")
@@ -30,7 +30,7 @@ recaptcha = ReCaptcha()
 recaptcha.init_app(app)
 
 
-if get_status() == "dev":
+if env("STATUS") == "dev":
     app.debug = True
 else:
     app.debug = False
@@ -86,7 +86,7 @@ def contact():
             msg = Message(
                 f'Email from {name}',
                 recipients=[
-                    get_reciever()])
+                    env("RECIEVER")])
 
             msg.html = (f'<h1>{subject}</h1>'
                         f"<p style = 'white-space: pre-wrap'>{message}</p>"
