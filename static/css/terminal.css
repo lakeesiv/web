@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Consolas");
 span.console,
-strong.ico,
 strong.terminal-title {
   font-family: "Consolas", monospace;
 }
@@ -24,16 +23,21 @@ header.terminal {
   padding-left: 10px;
 }
 
-strong.ico {
-  font-size: 20pt;
+i.ico {
+  font-size: 15pt;
   float: right;
   padding-right: 10pt;
-  margin-top: -5px;
+  margin-top: 6px;
   padding-left: 10pt;
 }
 
-strong.min {
-  margin-top: -11pt;
+i.min {
+  margin-top: -0.5pt;
+}
+
+i.max {
+  font-size: 11.5pt !important;
+  margin-top: 8.5px;
 }
 
 .terminal-container {
