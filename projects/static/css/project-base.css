@@ -15,17 +15,6 @@ h1.h1-project-title {
   margin-bottom: 0pt;
   text-align: center;
 }
-/*
-.btn {
-  font-size: 30pt;
-  padding-top: 0pt;
-  position: absolute;
-  left: 0;
-  padding-top: 12pt;
-}*/
-.btn:hover {
-  opacity: 0.7;
-}
 
 .tech-used {
   font-size: 10pt;
@@ -49,6 +38,6 @@ ul.description {
   padding:0;
 }
 
-.fa-github {
-  padding-left: 5px
+.fa {
+  padding-right: 5px
 }
