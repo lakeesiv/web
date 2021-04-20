@@ -1,45 +1,80 @@
-{%extends "projects/project-base.html"%} 
-
-{% block about %}
+{%extends "projects/project-base.html"%} {% block about %}
 
 <p float="center">
-  <img src="{{ url_for('projects.static', filename = '/projects/x-ray-cnn/IM-0001-0001.jpeg') }}" width=48% />   
-  <img src="{{ url_for('projects.static', filename = '/projects/x-ray-cnn/person1_virus_9.jpeg') }}" width=50%/> 
+	<img
+		src="{{ url_for('projects.static', filename = '/projects/x-ray-cnn/IM-0001-0001.jpeg') }}"
+		width="48%"
+	/>
+	<img
+		src="{{ url_for('projects.static', filename = '/projects/x-ray-cnn/person1_virus_9.jpeg') }}"
+		width="50%"
+	/>
 </p>
 
-<p> Here you can see two chest X-rays, left being normal and right showing signs of pneumonia. You can clearly see that the right has areas of "haze", alluding to presence of pneumonia.</p>
+<p>
+	Here you can see two chest X-rays, left being normal and right showing signs
+	of pneumonia. You can clearly see that the right has areas of "haze",
+	alluding to presence of pneumonia.
+</p>
 
-<strong>	How could we get software to identify which one has pneumonia then? 
+<strong>
+	How could we get software to identify which one has pneumonia then?
 </strong>
 
 <p>
-Well, thats exactly where
-Convolutional Neural Networks (CNN) comes into play. <br/>  CNNs are commonly used to classify images and this repository contains CNN that I created to solve that problem with an accuracy of <strong>89.7%</strong>!</p>
+	Well, thats exactly where Convolutional Neural Networks (CNN) comes into
+	play. <br />
+	CNNs are commonly used to classify images and this repository contains CNN
+	that I created to solve that problem with an accuracy of
+	<strong>89.7%</strong>!
+</p>
 
-{% endblock %}
-
-
-
-{% block pagecontent %}
-<hr style="margin-top: 8pt">
-<h2>GUI</h2>
-
+{% endblock %} {% block pagecontent %}
+<!-- h2 style="padding-top: 10px">GUI</h2>
+<hr>
 Using Tkinter I created a GUI which allows the user to see the model's prediction on the unseen test data.
 
 <p align="center">
 <img src="{{ url_for('projects.static', filename = '/projects/x-ray-cnn/GUI.gif') }}" height=500px >
-</p>
+</p> -->
+
+<h2 style="padding-top: 10px">GUI</h2>
+<hr />
+
+<div class="row" style="justify-content: center">
+	<div class="col-md-4">
+		<p align="center">
+			<img
+				src="{{ url_for('projects.static', filename = '/projects/x-ray-cnn/GUI.gif') }}"
+				height="500px"
+			/>
+		</p>
+	</div>
+	<div class="col-md-4" style="margin-top: 20px; margin-bottom: 20px">
+		Using Tkinter I created a GUI which allows the user to see the model's
+		prediction on the unseen test data.
+	</div>
+</div>
 
 <h2>Model</h2>
+<hr />
 <p>The model was created using Keras.</p>
 
-<p>The best model <code>best_model.h5</code>  achieved <strong>89.7%**</strong>  accuracy on the unseen testing data.</p> 
-<p>This was achieved by using Keras Tuning to optimize the hyperparameters and the number of layers. The resulting model looks like:</p>
-
+<p>
+	The best model <code>best_model.h5</code> achieved
+	<strong>89.7%**</strong> accuracy on the unseen testing data.
+</p>
+<p>
+	This was achieved by using Keras Tuning to optimize the hyperparameters and
+	the number of layers. The resulting model looks like:
+</p>
 
 <p align="center">
-<img src="{{ url_for('projects.static', filename = '/projects/x-ray-cnn/X-rayCNNStruc.PNG') }}" width=60% 
-centre>
+	<img
+		src="{{ url_for('projects.static', filename = '/projects/x-ray-cnn/X-rayCNNStruc.PNG') }}"
+		width="60%"
+		centre
+	/>
 </p>
 
 {% endblock pagecontent %}
