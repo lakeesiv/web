@@ -8,9 +8,9 @@
   type="text/css"
   href="{{ url_for('projects.static', filename='css/project-base.css') }}"
 />
-{% endblock imp %} 
+{% endblock imp %}
 
-<!-- prettier-ignore -->  
+<!-- prettier-ignore -->
 {%block content%}
 
 <div class="container">
@@ -18,9 +18,8 @@
   <div class="row">
     <div class="col-md-7">
       <h2>About</h2>
-      <hr>
-      {%block about%}
-      {%endblock about%}
+      <hr />
+      {%block about%} {%endblock about%}
     </div>
     <div class="col-md-5">
       <div class="description-box">
@@ -28,9 +27,15 @@
           <!-- prettier-ignore -->
           {% if github %}
           <li>
-            <a class="" href="{{ github }}" target="_blank">
-              Github <i class="fa fa-github"></i
-            ></a>
+            <i class="fa fa-github"></i
+            ><a class="" href="{{ github }}" target="_blank"> Github </a>
+          </li>
+          <!-- prettier-ignore -->
+          {% endif %}
+          {% if website %}
+          <li>
+            <i class="fa fa-globe"></i>
+            <a class="" href="{{ website }}" target="_blank"> {{ website }} </a>
           </li>
           <!-- prettier-ignore -->
           {% endif %}
