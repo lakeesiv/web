@@ -1,9 +1,11 @@
 .project-title {
   display: flex;
-  justify-content: center;
-  text-align: center;
+  justify-content: left;
+  text-align: left;
   position: relative;
   margin-top: -30pt;
+  font-size: 50pt;
+  padding-bottom: 20pt;
 }
 
 h1.h1-project-title {
@@ -31,4 +33,9 @@ h1.h1-project-title {
 }
 p {
   line-height: 20pt
+}
+
+.box {
+  border:1px solid black;
+  border-radius: 5px;
 }
