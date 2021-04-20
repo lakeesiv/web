@@ -29,3 +29,6 @@ h1.h1-project-title {
   font-size: 10pt;
   font-style: italic;
 }
+p {
+  line-height: 20pt
+}
