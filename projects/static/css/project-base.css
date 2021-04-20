@@ -15,14 +15,14 @@ h1.h1-project-title {
   margin-bottom: 0pt;
   text-align: center;
 }
-
+/*
 .btn {
   font-size: 30pt;
   padding-top: 0pt;
   position: absolute;
   left: 0;
   padding-top: 12pt;
-}
+}*/
 .btn:hover {
   opacity: 0.7;
 }
@@ -38,4 +38,8 @@ p {
 .box {
   border:1px solid black;
   border-radius: 5px;
+}
+
+ul.description-box {
+  list-style-type: none;
 }
