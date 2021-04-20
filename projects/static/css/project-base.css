@@ -15,11 +15,18 @@ p {
 .description-box {
   border:1px solid black;
   border-radius: 5px;
-  margin-top: 53px;
   padding-top: 10px;
   padding-left: 20px;
+  margin-bottom: 15px;
 
 }
+
+@media screen and (min-width: 1400px) {
+  .description-box {
+  margin-top: 53px;
+  }
+}
+
 
 ul.description {
   list-style-type: none;
@@ -29,3 +36,4 @@ ul.description {
 .fa {
   padding-right: 5px
 }
+
