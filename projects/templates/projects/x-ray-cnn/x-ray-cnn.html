@@ -1,8 +1,6 @@
 {%extends "projects/project-base.html"%} 
 
-{% block pagecontent %}
-<hr style="margin-top: 8pt">
-<h1>About</h1>
+{% block about %}
 
 <p float="center">
   <img src="{{ url_for('projects.static', filename = '/projects/x-ray-cnn/IM-0001-0001.jpeg') }}" width=48% />   
@@ -18,6 +16,13 @@
 Well, thats exactly where
 Convolutional Neural Networks (CNN) comes into play. <br/>  CNNs are commonly used to classify images and this repository contains CNN that I created to solve that problem with an accuracy of <strong>89.7%</strong>!</p>
 
+{% endblock %}
+
+
+
+{% block pagecontent %}
+<hr style="margin-top: 8pt">
+<h2>GUI</h2>
 
 Using Tkinter I created a GUI which allows the user to see the model's prediction on the unseen test data.
 
@@ -25,7 +30,7 @@ Using Tkinter I created a GUI which allows the user to see the model's predictio
 <img src="{{ url_for('projects.static', filename = '/projects/x-ray-cnn/GUI.gif') }}" height=500px >
 </p>
 
-<h1>Model</h1>
+<h2>Model</h2>
 <p>The model was created using Keras.</p>
 
 <p>The best model <code>best_model.h5</code>  achieved <strong>89.7%**</strong>  accuracy on the unseen testing data.</p> 
