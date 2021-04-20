@@ -32,10 +32,19 @@
           </li>
           <!-- prettier-ignore -->
           {% endif %}
+          <!-- prettier-ignore -->
           {% if website %}
           <li>
             <i class="fa fa-globe"></i>
+
             <a class="" href="{{ website }}" target="_blank"> {{ website }} </a>
+          </li>
+          <!-- prettier-ignore -->
+          {% endif %}
+          <!-- prettier-ignore -->
+          {% if tech %}
+          <li style="margin-top: 20px">
+            <i class="fa fa-wrench"></i> Tech used
           </li>
           <!-- prettier-ignore -->
           {% endif %}
@@ -43,16 +52,7 @@
       </div>
     </div>
   </div>
-
-  <hr style="margin-bottom: 8pt" />
-  {% if website %}
-  <h1 style="text-align: center; font-size: 10pt">
-    <a href="{{website}}" target="_blank">{{website}}</a>
-  </h1>
-  <hr style="margin-top: 8pt" />
-  {%endif%} {% if tech %}
-  <h1 class="tech-used">Technolgies used: {{ tech }}</h1>
-  {% endif %} {% block pagecontent %} {% endblock pagecontent %}
+{% block pagecontent %} {% endblock pagecontent %}
 </div>
 
 {% endblock content %}

@@ -8,18 +8,6 @@
   padding-bottom: 20pt;
 }
 
-h1.h1-project-title {
-  display: inline-block;
-  font-size: 50pt;
-  padding-bottom: 0pt;
-  margin-bottom: 0pt;
-  text-align: center;
-}
-
-.tech-used {
-  font-size: 10pt;
-  font-style: italic;
-}
 p {
   line-height: 20pt
 }
