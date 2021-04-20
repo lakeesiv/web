@@ -45,14 +45,26 @@
           {% if tech %}
           <li style="margin-top: 20px">
             <i class="fa fa-wrench"></i> Tech used
+            <ul>
+            <!-- prettier-ignore -->
+            {% for item in tech %}
+              <li>{{ item }}</li>
+            <!-- prettier-ignore -->
+            {% endfor %}            
+            </ul>
           </li>
           <!-- prettier-ignore -->
           {% endif %}
         </ul>
       </div>
+
     </div>
+    <div style="padding-left: 10px;">
+      {% block pagecontent %} {% endblock pagecontent %}
+    </div>
+    
   </div>
-{% block pagecontent %} {% endblock pagecontent %}
+
 </div>
 
 {% endblock content %}
