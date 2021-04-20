@@ -9,31 +9,28 @@
 }
 
 p {
-  line-height: 20pt
+  line-height: 20pt;
 }
 
 .description-box {
-  border:1px solid black;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 5px;
   padding-top: 10px;
   padding-left: 20px;
   margin-bottom: 15px;
-
 }
 
 @media screen and (min-width: 1400px) {
   .description-box {
-  margin-top: 53px;
+    margin-top: 53px;
   }
 }
 
-
 ul.description {
   list-style-type: none;
-  padding:0;
+  padding: 0;
 }
 
 .fa {
-  padding-right: 5px
+  padding-right: 5px;
 }
-
