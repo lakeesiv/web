@@ -6,7 +6,7 @@
 		"img": "cardimgs/flask-website.PNG",
 		"date": "5/4/21 - present",
 		"github": "https://github.com/LakeeSiv/web",
-		"tech": ["Flask", "Bootstrap", "Flask-Mail", "SendGrid's mail API", "Typed.js"],
+		"tech": ["Flask", "Bootstrap", "Flask-Mail", "SendGrid's mail API", "Typed.js", "reCaptcha"],
 		"website":"https://lakee.herokuapp.com/"
 	},
 
