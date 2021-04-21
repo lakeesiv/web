@@ -16,12 +16,12 @@
 <div class="container">
   <h1 class="project-title">Flood</h1>
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 order-2 order-sm-1">
       <h2>About</h2>
       <hr />
       {%block about%} {%endblock about%}
     </div>
-    <div class="col-md-5">
+    <div class="col-md-5 order-1 order-sm-2">
       <div class="description-box">
         <ul class="description">
           <!-- prettier-ignore -->
@@ -46,28 +46,23 @@
           <li style="margin-top: 20px">
             <i class="fa fa-wrench"></i> Tech used
             <ul>
-            <!-- prettier-ignore -->
-            {% for item in tech %}
+              <!-- prettier-ignore -->
+              {% for item in tech %}
               <li>{{ item }}</li>
-            <!-- prettier-ignore -->
-            {% endfor %}            
+              <!-- prettier-ignore -->
+              {% endfor %}
             </ul>
           </li>
           <!-- prettier-ignore -->
           {% endif %}
         </ul>
       </div>
-
     </div>
-    <div style="padding-left: 10px;">
-      {% block pagecontent %} {% endblock pagecontent %}
-    </div>
-    
   </div>
 
+  {% block pagecontent %} {% endblock pagecontent %}
 </div>
 <!-- blank space div -->
-<div style="margin-bottom: 100px;">
-</div>
+<div style="margin-bottom: 100px"></div>
 
 {% endblock content %}
