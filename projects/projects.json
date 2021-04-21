@@ -16,7 +16,7 @@
 		"link": "etoh",
 		"img": "cardimgs/etoh.png",
 		"date": "23-24/01/21",
-		"github": "https://github.com/LakeeSiv/HackCambridge",
+		"github": "https://github.com/LakeeSiv/EtOH",
 		"tech": ["Dash", "plotly"],
 		"website":"https://etoh.herokuapp.com/"
 	},
