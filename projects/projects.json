@@ -6,8 +6,15 @@
 		"img": "cardimgs/flask-website.PNG",
 		"date": "5/4/21 - present",
 		"github": "https://github.com/LakeeSiv/web",
-		"tech": ["Flask", "Bootstrap", "Flask-Mail", "SendGrid's mail API", "Typed.js", "reCaptcha"],
-		"website":"https://lakee.herokuapp.com/"
+		"tech": [
+			"Flask",
+			"Bootstrap",
+			"Flask-Mail",
+			"SendGrid's mail API",
+			"Typed.js",
+			"reCaptcha"
+		],
+		"website": "https://lakee.herokuapp.com/"
 	},
 
 	{
@@ -17,8 +24,8 @@
 		"img": "cardimgs/etoh.png",
 		"date": "23-24/01/21",
 		"github": "https://github.com/LakeeSiv/EtOH",
-		"tech": ["Dash", "plotly"],
-		"website":"https://etoh.herokuapp.com/",
+		"tech": ["Dash", "plotly", "pandas"],
+		"website": "https://etoh.herokuapp.com/",
 		"devpost": "https://devpost.com/software/blood-alcohol-levels-overtime?ref_content=my-projects-tab&ref_feature=my_projects"
 	},
 	{
@@ -28,8 +35,13 @@
 		"img": "cardimgs/flood.png",
 		"date": "11-29/01/21",
 		"github": "https://github.com/LakeeSiv/Flood",
-		"tech": ["pytest", "Dash", "plotly", "Continous Integration (github actions)"],
-		"website":"https://flood-lsfm.herokuapp.com/"
+		"tech": [
+			"pytest",
+			"Dash",
+			"plotly",
+			"Continous Integration (github actions)"
+		],
+		"website": "https://flood-lsfm.herokuapp.com/"
 	},
 	{
 		"title": "X-ray CNN",
@@ -40,6 +52,6 @@
 		"github": "https://github.com/LakeeSiv/x-ray-CNN",
 		"tech": ["Keras", "numpy", "openCV", "Tkinter"],
 
-		"website":""
+		"website": ""
 	}
 ]
