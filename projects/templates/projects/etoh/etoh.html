@@ -1,7 +1,17 @@
-{%extends "projects/project-base.html"%} 
+{%extends "projects/project-base.html"%}
 
 <!-- prettier-ignore -->
 {% block about %}
+<p>
+	EtOH is a website which allows you to "predict" how your blood alcohol
+	levels will vary with time after drinking. It was created by
+</p>
+<ul style="list-style-type: circle">
+	<li>Lakee Sivaraya</li>
+	<li>Ankit Bhattarai</li>
+	<li>Adhi Saravanan</li>
+</ul>
+<p>For the Hex Cambridge 2021 Hackathon.</p>
 
 <!-- prettier-ignore -->
 {% endblock about %}
@@ -9,6 +19,53 @@
 <!-- prettier-ignore -->
 {% block pagecontent %}
 
+<h2>How to use it</h2>
+<hr />
+
+<ul style="list-style-type: circle;line">
+	<li>
+		Input the necessary physiological factors like age, weight, height ,etc.
+	</li>
+	<li>
+		Add the drinks you drank. There are a set of drinks available in the
+		drop down however you can also enter a "custom" drink. Then enter their
+		respective ABV, volume and time you drank it.
+	</li>
+	<li>
+		You will then see a table of the drinks you drank with all their
+		respective data, you are able to delete a drink by pressing the times
+		icon ( <i class="fa fa-times" aria-hidden="true"></i>)
+	</li>
+	<li>Press the "Update Graph" button to see the results.</li>
+</ul>
+
+<h2>Example</h2>
+<hr />
+<div align="center">
+	<img
+		src="{{ url_for('projects.static', filename = '/projects/etoh/example.PNG') }}"
+		width="100%"
+	/>
+</div>
+
+<h2 style="margin-top: 10px">Development Process</h2>
+<hr />
+<p>
+	Firstly as a team we searched through many research papers to figure out how
+	to model how blood alcohol levels vary with time. My team mates were set
+	with the task of implementing the model (though I did help with implemting
+	this into the website).
+</p>
+<p>
+	I was set with the gruelling task of making the website, since I was the
+	only one with experience of making web apps. I decided to use the python
+	library, <a href="https://plotly.com/dash/">Dash</a>. One issue I faced was timing,
+	and since I was the only one who knew how to make a website, I had very little to make
+	the aesthetics of the website look nice. I was focused on the functionality.
+</p>
+<p>
+	In the end the website worked pretty well however if we had more time/ more team members we would have been able to build a very nice website.
+</p>
 
 <!-- prettier-ignore -->
 {% endblock pagecontent %}
