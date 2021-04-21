@@ -18,7 +18,8 @@
 		"date": "23-24/01/21",
 		"github": "https://github.com/LakeeSiv/EtOH",
 		"tech": ["Dash", "plotly"],
-		"website":"https://etoh.herokuapp.com/"
+		"website":"https://etoh.herokuapp.com/",
+		"devpost": "https://devpost.com/software/blood-alcohol-levels-overtime?ref_content=my-projects-tab&ref_feature=my_projects"
 	},
 	{
 		"title": "Flood",
