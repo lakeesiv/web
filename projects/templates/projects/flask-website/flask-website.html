@@ -14,6 +14,14 @@
 
 <h2>Development</h2>
 <hr />
+<h4>Styling</h4>
+<p>
+	The majority of styling was done by using Bootstrap 5 and CSS. In certain
+	areas I used external libraries like <code>typed.js</code> for typing
+	animations and <code>highlight.js</code> for code blocks. Icons used in this
+	website were taken from <a href="https://fontawesome.com/">font awesome</a>.
+</p>
+<br />
 <h4>Modular Components</h4>
 
 <p>
@@ -50,12 +58,30 @@
 	If I needed to change an attribute for a project, it is simple as just
 	changing the JSON instead of having to change a block of HTML.
 </p>
-
-<h4>Styling</h4>
+<br />
+<h4>Contact Page</h4>
 <p>
-	The majority of styling was done by using Bootstrap 5 and CSS. In certain
-	areas I used external libraries like <code>typed.js</code> for typing
-	animations and <code>highlight.js</code> for code blocks.
+	The contact page was one of the first pages I tried to tackle. I firstly
+	created the textarea elements then by using flask, I got the necessary
+	information by taking reading the text in the elements when a POST request
+	is made (which occurs when the send button is pressed)
+</p>
+<pre>
+	<code class="python">if request.method == "POST":
+    name = request.form["name"]
+    email = request.form["email"]
+    subject = request.form["subject"]
+    message = request.form["message"]</code>
+</pre>
+
+<p>
+	Now time to send me the email with the information. To do this I used the
+	<code>Flask-Mail</code> library to easily send the email just by using a few
+	lines of code. But I unexpectedly ran into an issue where the email does not
+	get sent, when I deploy it. This was due to a security issue where gmail
+	will not allow its email to be logged in on external websites (i.e Heroku).
+	To fix this I resorted to setting up a SendGrid account and using their mail
+	API to send emails.
 </p>
 
 <!-- prettier-ignore -->
