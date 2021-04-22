@@ -1,7 +1,10 @@
-{%extends "projects/project-base.html"%} 
+{%extends "projects/project-base.html"%}
 
 <!-- prettier-ignore -->
 {% block about %}
+
+<p>This website you are currently on was built with Flask.</p>
+<p>My aim with this website was to be clean, fast and responsive website.</p>
 
 <!-- prettier-ignore -->
 {% endblock about %}
@@ -9,6 +12,40 @@
 <!-- prettier-ignore -->
 {% block pagecontent %}
 
+<h2>Development Process</h2>
+<hr />
+<h4>Functionality</h4>
+
+<p>
+	I wanted the site to be modular, so I can easily add new stuff like projects
+	and timeline objects. To do this I used JSON files to save information about
+	certain components for example, I saved the data for each projects in the
+	<code>projects.json</code> file. Here you can see the object for this website.
+</p>
+
+<pre>
+	<code class="json">{
+  "title": "Flask Website",
+  "text": "This website you are on now was built with flask",
+  "link": "flask-website",
+  "img": "cardimgs/flask-website.PNG",
+  "date": "5/4/21 - present",
+  "github": "https://github.com/LakeeSiv/web",
+  "tech": [
+    "Flask",
+    "Bootstrap",
+    "Flask-Mail",
+    "SendGrid's mail API",
+    "Typed.js",
+    "reCaptcha"
+  ],
+  "website": "https://lakee.herokuapp.com/"
+}
+	</code>
+</pre>
+
+<h4>Styling</h4>
+<p>The styling was done by using Bootstrap 5 and CSS.</p>
 
 <!-- prettier-ignore -->
 {% endblock pagecontent %}
