@@ -50,6 +50,17 @@
       crossorigin="anonymous"
     ></script>
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/vs2015.min.css"
+      integrity="sha512-w8aclkBlN3Ha08SMwFKXFJqhSUx2qlvTBFLLelF8sm4xQnlg64qmGB/A6pBIKy0W8Bo51yDMDtQiPLNRq1WMcQ=="
+      crossorigin="anonymous"
+    />
+
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <title>{{title}}</title>
@@ -92,5 +103,10 @@
 
   <body>
     <div class="container">{%block content%} {%endblock content%}</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/languages/go.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>
