@@ -12,15 +12,17 @@
 <!-- prettier-ignore -->
 {% block pagecontent %}
 
-<h2>Development Process</h2>
+<h2>Development</h2>
 <hr />
-<h4>Functionality</h4>
+<h4>Modular Components</h4>
 
 <p>
-	I wanted the site to be modular, so I can easily add new stuff like projects
-	and timeline objects. To do this I used JSON files to save information about
-	certain components for example, I saved the data for each projects in the
-	<code>projects.json</code> file. Here you can see the object for this website.
+	I wanted the site to be modular, so I can easily add new stuff like
+	<a href="/projects" target="_blank">projects</a> and
+	<a href="/about" target="_blank">timeline</a> objects. To do this I used
+	JSON files to save information about certain components for example, I saved
+	the data for each projects in the <code>projects.json</code> file. Here you
+	can see the object for this website.
 </p>
 
 <pre>
@@ -44,8 +46,17 @@
 	</code>
 </pre>
 
+<p>
+	If I needed to change an attribute for a project, it is simple as just
+	changing the JSON instead of having to change a block of HTML.
+</p>
+
 <h4>Styling</h4>
-<p>The styling was done by using Bootstrap 5 and CSS.</p>
+<p>
+	The majority of styling was done by using Bootstrap 5 and CSS. In certain
+	areas I used external libraries like <code>typed.js</code> for typing
+	animations and <code>highlight.js</code> for code blocks.
+</p>
 
 <!-- prettier-ignore -->
 {% endblock pagecontent %}
