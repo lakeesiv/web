@@ -38,5 +38,4 @@ def projects_modified(data, colors):
                 tag = {"tag": tag, "color": "white"}
             temp.append(tag)
         project["tags"] = temp
-    print(data)
     return data
