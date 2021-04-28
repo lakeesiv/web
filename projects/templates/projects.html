@@ -15,8 +15,8 @@
   {% for project in projects %} {% set date = project["date"] %} {% set link =
   project["link"] %} {% set img = url_for("projects.static", filename =
   project["img"])%} {% set cardtitle = project["title"] %} {% set text =
-  project["text"] %} {% set date = project["date"] %} {% include "card.html" %}
-  {% endfor %}
+  project["text"] %} {% set date = project["date"] %} {% set tagsandcolors =
+  project["tags"] %} {% include "card.html" %} {% endfor %}
 </div>
 
 {%endblock content%}
