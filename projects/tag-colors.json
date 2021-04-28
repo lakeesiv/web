@@ -1,6 +1,14 @@
 {
 	"python": "#3572A5",
-	"HTML":"#e44b23",
-	"CSS":"#563d7c",
-	"javascript":"#f1e05a"
+	"HTML": "#e44b23",
+	"CSS": "#563d7c",
+	"javascript": "#f1e05a",
+	"flask": "#224B39",
+	"pandas": "#1d03e2",
+	"Dash": "#3F4F75",
+	"plotly": "#7CC7BA",
+	"pytest": "#59FF3C",
+	"Keras": "#D00000",
+	"numpy": "#4D77CF",
+	"Tkinter": "#FFFFCC"
 }
