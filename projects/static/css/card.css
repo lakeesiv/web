@@ -1,0 +1,15 @@
+.tag-parent {
+	display: flex;flex-direction: row; flex-flow: row wrap ;
+}
+
+.tag {
+	padding-right: 8px;border-width: 1px;border-color: black;
+}
+
+.tag-content {
+	            background-color: yellow;
+            border-radius: 7px;
+            padding: 4px 4px 4px 4px;
+            font-size: 8pt;
+            color: black;
+}
