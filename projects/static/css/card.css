@@ -1,25 +1,23 @@
 .tags-parent {
-	display: flex;
-	flex-direction: row;
-	flex-flow: row wrap;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
 }
 
 .tag:hover {
-	transform: scale(1.02);
+  transform: scale(1.02);
 }
 
-
 .tag {
-	padding-right: 8px;
-	border-width: 1px;
-	border-color: black;
+  padding-right: 8px;
+  border-width: 1px;
+  border-color: black;
 }
 
 .tag-content {
-	background-color: yellow;
-	border-radius: 7px;
-	padding: 4px 4px 4px 4px;
-	font-size: 8pt;
-	color: black;
-	font-family: monospace;
+  border-radius: 7px;
+  padding: 4px 4px 4px 4px;
+  font-size: 8pt;
+  color: black;
+  font-family: monospace;
 }
