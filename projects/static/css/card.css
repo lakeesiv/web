@@ -2,10 +2,11 @@
   display: flex;
   flex-direction: row;
   flex-flow: row wrap;
+  margin-bottom: -8px;
 }
 
 .tag:hover {
-  transform: scale(1.02);
+  transform: scale(1.06);
 }
 
 .tag {
