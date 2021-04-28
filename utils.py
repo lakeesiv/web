@@ -23,3 +23,20 @@ def get_json(path):
     with open(path) as json_file:
         data = json.load(json_file)
         return data
+
+
+def projects_modified(data, colors):
+    for project in data:
+        tags = project["tags"]
+        temp = []
+        for i in range(len(tags)):
+            tag = tags[i]
+
+            if tag in colors:
+                tag = {"tag": tag, "color": colors[tag]}
+            else:
+                tag = {"tag": tag, "color": "white"}
+            temp.append(tag)
+        project["tags"] = temp
+    print(data)
+    return data
