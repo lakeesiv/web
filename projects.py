@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, url_for
-from utils import get_json
+from utils import get_json, projects_modified
 
 projects = Blueprint(
     'projects',
@@ -10,6 +10,9 @@ projects = Blueprint(
 )
 
 projects_data = get_json("projects/projects.json")
+tag_colors = get_json("projects/tag-colors.json")
+
+projects_data = projects_modified(projects_data, tag_colors)
 
 
 @projects.route("/")
