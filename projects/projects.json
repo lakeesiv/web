@@ -14,7 +14,8 @@
 			"Typed.js",
 			"reCaptcha"
 		],
-		"website": "https://lakee.herokuapp.com/"
+		"website": "https://lakee.herokuapp.com/",
+		"tags": ["flask", "python", "HTML", "CSS", "javascript"]
 	},
 
 	{
@@ -26,7 +27,8 @@
 		"github": "https://github.com/LakeeSiv/EtOH",
 		"tech": ["Dash", "plotly", "pandas"],
 		"website": "https://etoh.herokuapp.com/",
-		"devpost": "https://devpost.com/software/blood-alcohol-levels-overtime?ref_content=my-projects-tab&ref_feature=my_projects"
+		"devpost": "https://devpost.com/software/blood-alcohol-levels-overtime?ref_content=my-projects-tab&ref_feature=my_projects",
+		"tags": ["python", "pandas", "Dash", "plotly"]
 	},
 	{
 		"title": "Flood",
@@ -41,7 +43,8 @@
 			"plotly",
 			"Continous Integration (github actions)"
 		],
-		"website": "https://flood-lsfm.herokuapp.com/"
+		"website": "https://flood-lsfm.herokuapp.com/",
+		"tags": ["python", "Dash", "plotly", "pytest"]
 	},
 	{
 		"title": "X-ray CNN",
@@ -51,7 +54,7 @@
 		"date": "22-28/12/20",
 		"github": "https://github.com/LakeeSiv/x-ray-CNN",
 		"tech": ["Keras", "numpy", "openCV", "Tkinter"],
-
+		"tags": ["python", "Keras", "numpy", "Tkinter"],
 		"website": ""
 	}
 ]
