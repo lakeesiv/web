@@ -52,7 +52,11 @@ def favicon():
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template("home.html", title="Home", active_page="home")
+    return render_template(
+        "home.html",
+        title="Home",
+        active_page="home",
+        nofooter=True)
 
 
 timeline_data = get_json("static/timeline.json")
