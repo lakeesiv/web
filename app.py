@@ -1,5 +1,6 @@
 import os
-from flask import Flask, render_template, send_from_directory, request, redirect, url_for, flash
+from flask import (Flask, render_template, send_from_directory,
+                   request, redirect, url_for, flash)
 from flask_mail import Mail, Message
 from utils import email_check, get_json, env
 from dotenv import load_dotenv
