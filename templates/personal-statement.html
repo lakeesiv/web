@@ -87,9 +87,19 @@
 </style>
 
 <script>
-  setTimeout(function () {
-    window.location.href =
-      "https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1";
-  }, 1000);
+  document.addEventListener(
+    "visibilitychange",
+    function () {
+      if (document.hidden) {
+        console.log("bye");
+      } else {
+        setTimeout(function () {
+          window.location.href =
+            "https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1";
+        }, 1000);
+      }
+    },
+    false
+  );
 </script>
 {%endblock content%}
