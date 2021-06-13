@@ -1,0 +1,95 @@
+{%extends "base.html"%} {%block content%}
+<h1>Personal Statement</h1>
+<div
+  style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  "
+>
+  <div class="loader" style="align-items: center"></div>
+</div>
+<section>
+  <div class="loading loading01">
+    <span>L</span>
+    <span>O</span>
+    <span>A</span>
+    <span>D</span>
+    <span>I</span>
+    <span>N</span>
+    <span>G</span>
+  </div>
+</section>
+<style>
+  .loader {
+    border: 20px solid #8d8282; /* Light grey */
+    border-top: 20px solid #2c2c2c; /* Blue */
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    animation: spin 2.5s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .loading {
+    font-size: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    text-align: center;
+  }
+  .loading span {
+    display: inline-block;
+    margin: 0 -0.05em;
+  }
+  /* code #1 */
+  .loading01 span {
+    animation: loading01 1.4s infinite alternate;
+  }
+  .loading01 span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .loading01 span:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  .loading01 span:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  .loading01 span:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  .loading01 span:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+  .loading01 span:nth-child(6) {
+    animation-delay: 0.5s;
+  }
+  .loading01 span:nth-child(7) {
+    animation-delay: 0.6s;
+  }
+  @keyframes loading01 {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+</style>
+
+<script>
+  setTimeout(function () {
+    window.location.href =
+      "https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1";
+  }, 1000);
+</script>
+{%endblock content%}
