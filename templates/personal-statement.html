@@ -1,27 +1,7 @@
 {%extends "base.html"%} {%block content%}
 <h1>Personal Statement</h1>
-<div
-  style="
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 70px;
-    padding-bottom: 70px;
-  "
->
-  <div class="loader" style="align-items: center"></div>
-</div>
-<section>
-  <div class="loading loading01">
-    <span>L</span>
-    <span>O</span>
-    <span>A</span>
-    <span>D</span>
-    <span>I</span>
-    <span>N</span>
-    <span>G</span>
-  </div>
-</section>
+<span class="hm" style="padding-top: 10px"></span>
+<p></p>
 <style>
   .loader {
     border: 20px solid #8d8282; /* Light grey */
@@ -91,7 +71,7 @@
     setTimeout(function () {
       window.location.href =
         "https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1";
-    }, 1000);
+    }, 4000);
   }
   document.addEventListener(
     "visibilitychange",
@@ -102,10 +82,35 @@
         setTimeout(function () {
           window.location.href =
             "https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1";
-        }, 1000);
+        }, 4000);
       }
     },
     false
   );
+
+  var a = `From a young age I was glued to the TV programme “How it's made”, in which I found great fascination in learning about how engineers design and manufacture products to cater different needs of society. Consequently I developed an interest of studying engineering, in which I aim to gain the skill sets required to design and construct products. Furthermore, it opens many different pathways for me to specialise in a field of engineering/science.
+  Having realised that developing a deep understanding of the mathematical principles such as complex numbers, matrices etc. is beneficial for pursuing my interest in engineering, I embarked on a journey of self-learning A-Level Further Mathematics without any formal teaching (as further mathematics is not currently offered in my school). My commitment and hard work enabled me to achieve good marks (Core Pure Mathematics – 100%, Mechanics – 99%) in the end of year 12 further mathematics examinations held by my school.`;
+
+  var typed2231 = new Typed(".hm", {
+    strings: [a],
+    typeSpeed: 10,
+    backSpeed: 0,
+    loop: false,
+    cursorChar: "_",
+  });
 </script>
-{%endblock content%}
+
+{%endblock content%} {%block imp%}
+<!-- <script>
+  var a = `From a young age I was glued to the TV programme “How it's made”, in which I found great fascination in learning about how engineers design and manufacture products to cater different needs of society. Consequently I developed an interest of studying engineering, in which I aim to gain the skill sets required to design and construct products. Furthermore, it opens many different pathways for me to specialise in a field of engineering/science.
+Having realised that developing a deep understanding of the mathematical principles such as complex numbers, matrices etc. is beneficial for pursuing my interest in engineering, I embarked on a journey of self-learning A-Level Further Mathematics without any formal teaching (as further mathematics is not currently offered in my school). My commitment and hard work enabled me to achieve good marks (Core Pure Mathematics – 100%, Mechanics – 99%) in the end of year 12 further mathematics examinations held by my school.`;
+
+  var typed2231 = new Typed(".hm", {
+    strings: a,
+    typeSpeed: 40,
+    backSpeed: 0,
+    loop: false,
+    cursorChar: "_",
+  });
+</script> -->
+{%endblock%}
