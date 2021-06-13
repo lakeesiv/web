@@ -87,6 +87,12 @@
 </style>
 
 <script>
+  if (!document.hidden) {
+    setTimeout(function () {
+      window.location.href =
+        "https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1";
+    }, 1000);
+  }
   document.addEventListener(
     "visibilitychange",
     function () {
