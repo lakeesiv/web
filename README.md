@@ -10,3 +10,4 @@ This repo contains the code used to create my personal website. The website is c
 - Typed.js 
 - reCaptcha using flask-reCaptcha
 
+
