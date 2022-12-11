@@ -7,7 +7,12 @@ This repo contains the code used to create my personal website. The website is c
 - Flask
 - Bootstrap (for styling)
 - Flask-mail with SendGrids API to send emails
-- Typed.js 
+- Typed.js
 - reCaptcha using flask-reCaptcha
 
+# TODO
 
+- IDP Page
+- Dent Revise
+- Senya Solutions
+- Panopto Downloader
