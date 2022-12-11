@@ -31,14 +31,12 @@ def projects_page(project_link):
         for d in projects_data:
             if project_link == d["link"]:
                 title = d["title"]
-                github = d["github"]
-                tech = d["tech"]
-                website = d["website"]
+                github = d.get("github", "")
+                devpost = d.get("devpost", "")
+                tech = d.get("tech", d.get("tags", []))
+                website = d.get("website", "")
 
-                if "devpost" in d:
-                    devpost = d["devpost"]
-                else:
-                    devpost = ""
+              
 
         return render_template(
             f"projects/{project_link}/{project_link}.html",
