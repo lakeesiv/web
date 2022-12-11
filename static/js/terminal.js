@@ -1,9 +1,17 @@
 let data = {
-  name: "Lakeeshan (Lakee) Sivaraya",
-  occupation: "1st Year Student",
+  name: "Lakee Sivaraya",
+  occupation: "3rd Year Student",
   university: "University of Cambridge",
-  subject: "Engineering",
-  skills: ["Python", "Javascript/Typescript", "HTML/CSS", "git"],
+  subject: "Information and Computer Engineering",
+  skills: [
+    "Javascript/Typescript",
+    "React (Next.js, Astro)",
+    "Vue",
+    "Cloud Computing (AWS, GCP, Firebase)",
+    "Python",
+    "Styling (Chakra, Mantine, Tailwind, Bootstrap)",
+    "git",
+  ],
 };
 
 let stats = JSON.stringify(data, null, 4);
