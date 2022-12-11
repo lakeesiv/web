@@ -1,5 +1,16 @@
 [
   {
+    "title": "Cam Moodle Auto Login",
+    "text": "Automatially login to cambridge moodle with your credentials",
+    "link": "cam-moodle-auto-login",
+    "img": "cardimgs/cam-moodle-auto-login.png",
+    "date": "21/11/21",
+    "github": "https://github.com/LakeeSiv/cam-moodle-auto-login",
+    "tech": ["Chrome API", "React", "Typescript", "Chakra UI"],
+    "website": "https://chrome.google.com/webstore/detail/cam-moodle-auto-login/leaelpeocjmngdhgkeldeopdpjcilmme",
+    "tags": ["chrome-api", "react", "typescript", "chakra-ui"]
+  },
+  {
     "title": "Whatsapp Discord Linker",
     "text": "Forward messages from a whatsapp group to a discord channel",
     "link": "whatsapp-discord-bot",

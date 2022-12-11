@@ -1,0 +1,32 @@
+{%extends "projects/project-base.html"%}
+
+<!-- prettier-ignore -->
+{% block about %}
+<p>
+  The Cambrdige University Moodle platform logs you out after the session
+  expires way too quickly. This is a chrome extension that automatically logs
+  you back in when you visit the Moodle platform.
+</p>
+
+<!-- prettier-ignore -->
+{% endblock about %}
+
+<!-- prettier-ignore -->
+{% block pagecontent %}
+
+<h2>How it works</h2>
+<hr />
+<p>
+  The extension uses the chrome storage API to store your username and password
+  (ciphered). When you visit the Moodle platform, the extension automatically
+  navigates you to the login page and injects your credentials into the login
+  form. It then submits the form and bang you are logged in. There is also the
+  ability for you to use your own password manager to store your credentials.
+</p>
+<p>
+  At the moment we have currently over 150 daily active users, but the
+  capability is more if I actually advertised it...
+</p>
+
+<!-- prettier-ignore -->
+{% endblock pagecontent %}
