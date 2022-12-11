@@ -1,0 +1,41 @@
+{%extends "projects/project-base.html"%}
+
+<!-- prettier-ignore -->
+{% block about %}
+
+<p>
+  Our Engineering group chat reached the WhatsApp limit of 256 people, so new
+  members were not able to join. So I decided to create a bot that would forward
+  messages from WhatsApp to Discord. This would allow us to continue using
+  WhatsApp and Discord at the same time.
+</p>
+
+<!-- prettier-ignore -->
+{% endblock about %}
+
+<!-- prettier-ignore -->
+{% block pagecontent %}
+
+<h2>Development</h2>
+<hr />
+<h4>Chrome Extension</h4>
+<p>
+  I decided to use a Chrome extension to get the WhatsApp messages. This was
+  becuase WhatsApp web does not like having web scrapers (like puppeteer) on it.
+  Chrome extensions are not blocked by WhatsApp web.
+</p>
+<p>
+  The extension is very simple, it awaits for a message to be sent in the group
+  chat and then parses the message and sends it to the server.
+</p>
+<br />
+<h4>Server/Bot</h4>
+
+<p>
+  The server and bot are interworking. The server is a simple express server,
+  once it recieves a message from the extension (via a POST request), it
+  triggers the bot to send the message to Discord.
+</p>
+
+<!-- prettier-ignore -->
+{% endblock pagecontent %}
