@@ -32,10 +32,10 @@ def projects_modified(data, colors):
         for i in range(len(tags)):
             tag = tags[i]
 
-            if tag in colors:
-                tag = {"tag": tag, "color": colors[tag]}
-            else:
-                tag = {"tag": tag, "color": "white"}
+            # if tag in colors:
+            #     tag = {"tag": tag, "color": colors[tag]}
+            # else:
+            tag = {"tag": tag, "color": "#7CC7BA"}
             temp.append(tag)
         project["tags"] = temp
     return data
