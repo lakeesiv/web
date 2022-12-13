@@ -1,0 +1,50 @@
+{%extends "projects/project-base.html"%}
+
+<!-- prettier-ignore -->
+{% block about %}
+
+<p>
+  Dent Revise is a platform that I am building to help dentistry students revise
+  for their exams. It is a web app that allows students to access high quality
+  flashcards and question banks to help them revise for their exams. It also
+  allows them to track their progress.
+</p>
+
+<!-- prettier-ignore -->
+{% endblock about %}
+
+<!-- prettier-ignore -->
+{% block pagecontent %}
+
+<h4>The Stack</h4>
+<hr />
+<p>
+  I decided to use Firebase as my backend. This was because it is a serverless
+  and it's free tier is very generous. It also has a large number of features
+  that I can use, such as authentication, database, and hosting. The SDKs are
+  somehwhat decent, however I would have preferred to go with a more standard
+  backend such as Node.js with PostgreSQL as the DB, but this would cost more.
+  The main benefit of Firebase is it's free tier, which allows me to host the
+  app for free.
+</p>
+<p>
+  For the frontend I am using the tried and trusted Nextjs + Chakra UI, this has
+  served me very well in the past, and I am very happy with it.
+</p>
+<br />
+<h4>Stripe</h4>
+
+<p>
+  Using GCP cloud functions, I created a serverless function that would handle
+  the subscription payments. This was done using Stripe. This was because it is
+  a very popular payment processor, and it is very easy to use.
+</p>
+<p>
+  Additionally, I created my own referral system, which allows users to get a
+  discount on their subscription if they refer a friend. This was done using
+  Firebase's cloud functions and Firestore. This allows our product to reach a
+  wider audience, and hence get more users.
+</p>
+
+<!-- prettier-ignore -->
+{% endblock pagecontent %}

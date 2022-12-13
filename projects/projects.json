@@ -9,6 +9,16 @@
     "tags": ["astro", "tailwindcss", "react"]
   },
   {
+    "title": "Dent Revise",
+    "text": "A revision platform for dentistry students",
+    "link": "dent-revise",
+    "img": "cardimgs/dent-revise.png",
+    "date": "8/21 (ongoing)",
+    "website": "https://dent-revise.web.app/",
+    "tech": ["Nextjs", "GCP", "Firebase", "Chakra UI"],
+    "tags": ["nextjs", "gcp", "firebase", "chakra-ui"]
+  },
+  {
     "title": "Integrated Desgin Project",
     "text": "Arduino based project to control a robot to collect and sort objects",
     "link": "idp",
