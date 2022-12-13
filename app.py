@@ -97,7 +97,8 @@ def contact():
                         f"<p style = 'white-space: pre-wrap'>{message}</p>"
                         f'From: {name} | {email}'
                         )
-            mail.send(msg)
+            print(msg)
+            mail.send(msg.as_string())
             return redirect(url_for("contact"))
         else:
             if not email_check(email):
@@ -126,10 +127,12 @@ def contact():
 def page_not_found(e):
     return render_template('404.html'), 404
 
+
 @app.route("/personal-statement")
 def personal_statement():
     # return redirect("https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1")
-    return render_template("personal-statement.html", title="Personal Statement", active_page = "about")
+    return render_template("personal-statement.html", title="Personal Statement", active_page="about")
+
 
 if __name__ == "__main__":
     app.run()
