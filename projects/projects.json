@@ -1,5 +1,14 @@
 [
   {
+    "title": "Senya Soltuions Website",
+    "text": "Website for my freelance business",
+    "link": "senya-solutions",
+    "img": "cardimgs/senya-solutions.png",
+    "date": "11/22 (ongoing)",
+    "tech": ["Astro", "TailwindCSS", "react"],
+    "tags": ["astro", "tailwindcss", "react"]
+  },
+  {
     "title": "Integrated Desgin Project",
     "text": "Arduino based project to control a robot to collect and sort objects",
     "link": "idp",
