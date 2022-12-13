@@ -1,5 +1,15 @@
 [
   {
+    "title": "Integrated Desgin Project",
+    "text": "Arduino based project to control a robot to collect and sort objects",
+    "link": "idp",
+    "img": "cardimgs/idp.png",
+    "date": "11/21",
+    "github": "https://github.com/LakeeSiv/idp-robot-controller",
+    "tech": ["Arduino", "PlatformIO", "C++"],
+    "tags": ["arduino", "platformio", "c++"]
+  },
+  {
     "title": "Cam Moodle Auto Login",
     "text": "Automatially login to cambridge moodle with your credentials",
     "link": "cam-moodle-auto-login",
