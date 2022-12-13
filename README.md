@@ -9,9 +9,3 @@ This repo contains the code used to create my personal website. The website is c
 - Flask-mail with SendGrids API to send emails
 - Typed.js
 - reCaptcha using flask-reCaptcha
-
-# TODO
-
-- IDP Page
-- Dent Revise
-- Senya Solutions
