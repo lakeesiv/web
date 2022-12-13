@@ -22,7 +22,7 @@
     "title": "Integrated Desgin Project",
     "text": "Arduino based project to control a robot to collect and sort objects",
     "link": "idp",
-    "img": "cardimgs/idp.png",
+    "img": "cardimgs/idp.jpg",
     "date": "11/21",
     "github": "https://github.com/LakeeSiv/idp-robot-controller",
     "tech": ["Arduino", "PlatformIO", "C++"],
