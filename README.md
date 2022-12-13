@@ -15,4 +15,3 @@ This repo contains the code used to create my personal website. The website is c
 - IDP Page
 - Dent Revise
 - Senya Solutions
-- Panopto Downloader
