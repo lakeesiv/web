@@ -97,8 +97,8 @@ def contact():
                         f"<p style = 'white-space: pre-wrap'>{message}</p>"
                         f'From: {name} | {email}'
                         )
-            print(msg)
-            mail.send(msg.as_string())
+            print(msg.as_string())
+            mail.send(msg)
             return redirect(url_for("contact"))
         else:
             if not email_check(email):
