@@ -6,7 +6,8 @@
     "img": "cardimgs/senya-solutions.png",
     "date": "11/22 (ongoing)",
     "tech": ["Astro", "TailwindCSS", "react"],
-    "tags": ["astro", "tailwindcss", "react"]
+    "tags": ["astro", "tailwindcss", "react"],
+    "website": "https://www.senyasolutions.com/"
   },
   {
     "title": "Dent Revise",
